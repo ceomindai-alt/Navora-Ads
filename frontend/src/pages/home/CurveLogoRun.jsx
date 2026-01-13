@@ -30,7 +30,7 @@ export default function CurveLogoRun() {
     <section className="relative w-full py-20 overflow-hidden">
 
       {/* TITLE */}
-      <div className="text-center mb-14 px-4">
+      <div className="text-center mb-12 px-4">
         <h2 className="text-2xl md:text-3xl font-bold text-white">
           Trusted by Industry Leaders
         </h2>

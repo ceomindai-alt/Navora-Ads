@@ -297,7 +297,7 @@ const faqSchema = {
 
 
       {/* ================= GROWTH FRAMEWORK ================= */}
-      <Section className="border-t border-white/10 py-32 px-6 lg:px-0">
+      <Section className="border-t border-white/10 py-20 px-6 lg:px-0">
         <div className="max-w-6xl mx-auto text-center">
           <ScrollRevealText />
           <div className="mt-16 grid md:grid-cols-4 gap-10 text-left">
@@ -348,7 +348,7 @@ const faqSchema = {
 
       {/* ================= TECHNOLOGY STACK ================= */}
      {/* ================= TECHNOLOGY STACK ================= */}
-<section className="py-28  overflow-hidden">
+<section className="py-20  overflow-hidden">
   
   {/* Constrained heading */}
   <div className="px-6 lg:px-14 text-center max-w-6xl mx-auto">
@@ -360,7 +360,7 @@ const faqSchema = {
   </div>
 
   {/* Full-width marquees */}
-  <div className="mt-20 space-y-8 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+  <div className="mt-10 mb-0 space-y-8 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
 
   <CurveLogoRun />
 
@@ -370,7 +370,7 @@ const faqSchema = {
 
       
       {/* ================= 5. TRUST ================= */}
-      <Section>
+      <Section >
   <h2 className="section-title">
     Industries We Serve Across Chennai & Beyond
   </h2>
@@ -409,7 +409,7 @@ const faqSchema = {
 
 
       {/* ================= CASE STUDIES ================= */}
-      <section id="case-studies " className="py-32 px-6 lg:px-0">
+      <section id="case-studies " className="py-20 px-6 lg:px-0">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="section-title">Case Study Highlights & Performance Proof</h2>
           <p className="mt-10 section-text">
@@ -473,7 +473,7 @@ const faqSchema = {
 </Section>
 
       {/* ================= FAQ SECTION ================= */}
-<Section className="border-t border-white/10 py-28 px-6 lg:px-14">
+<Section className="border-t border-white/10 py-20 px-6 lg:px-14">
   <div className="max-w-4xl mx-auto text-center">
     <h2 className="text-4xl font-semibold mb-6">
       Frequently Asked Questions
@@ -524,7 +524,7 @@ const faqSchema = {
 
 
       {/* ================= FINAL CTA ================= */}
-      <section className="py-36 px-6 lg:px-0 text-center">
+      <section className="py-20 px-6 lg:px-0 text-center">
         <h2 className="text-4xl font-semibold">Ready to Scale Your Business?</h2>
         <p className="mt-6 text-white/60">
           We partner with a limited number of brands each quarter.
@@ -549,7 +549,7 @@ function Section({ children }) {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="py-28 px-6 lg:px-0"
+      className="py-20 px-6 lg:px-0"
     >
       <div className="max-w-6xl mx-auto text-center [&>h2]:mb-6">
         {children}
