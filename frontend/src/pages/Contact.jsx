@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import WhatsAppCTA from "../components/WhatsAppCTA";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import AnimatedSubmitButton from "../components/AnimatedSubmitButton";
 
 emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);

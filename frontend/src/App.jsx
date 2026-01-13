@@ -25,10 +25,9 @@ import Insights from "./pages/Insights";
 import CursorGlow from "./components/CursorGlow";
 import Snowfall from "react-snowfall";
 import HighTicketLanding from "./seo/HighTicketLanding";
-import useSmoothScroll from "./components/useSmoothScroll";
+
 
 function App() {
-   useSmoothScroll();
   return (
     <>
   
