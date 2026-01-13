@@ -232,3 +232,6 @@ canvas {
 }
 
 
+nav::-webkit-scrollbar {
+  display: none;
+}
