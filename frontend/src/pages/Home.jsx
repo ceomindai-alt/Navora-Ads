@@ -261,7 +261,7 @@ const faqSchema = {
 
           </p>
 
-          <div className="mt-10 flex justify-center items-center gap-6">
+          <div className="mt-20 flex justify-center items-center gap-6">
             <a
               href="https://wa.me/919952957187"
               className="shimmer-btn rounded-full bg-[#2F8CFF] px-12 py-4 text-sm font-medium"

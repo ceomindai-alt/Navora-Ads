@@ -82,7 +82,7 @@ export default function HomeBgCanvas() {
       const device = getDevice();
 
       const scale =
-        device === "touch" ? 1.15 :
+        device === "touch" ? 0.95 :
         device === "tablet" ? 1.45 :
         1.7;
 
@@ -117,6 +117,8 @@ export default function HomeBgCanvas() {
           if (data[i + 3] > 150) {
             const px = x + centerX - offCanvas.width / 2;
             const py = y + centerY - offCanvas.height / 2;
+
+            
 
             particles.push({
               x: px,
