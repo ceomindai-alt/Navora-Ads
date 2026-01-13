@@ -1,0 +1,67 @@
+
+.navora-logo-rotate {
+  animation: navoraRotateLR 3s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes navoraRotateLR {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-6deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(6deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.navora-logo-rotate {
+  transition: transform 0.5s ease;
+}
+.navora-logo-rotate:hover {
+  transform: rotate(6deg);
+}
+
+
+/* ================= SECTION TYPOGRAPHY ================= */
+
+/* Section Title */
+.section-title {
+  font-size: clamp(2rem, 3.5vw, 2.5rem); /* responsive: ~32px → 40px */
+  font-weight: 600;
+  line-height: 1.2;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+/* Section Supporting Text */
+.section-text {
+  max-width: 48rem; /* 768px */
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1rem; /* 16px */
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Optional tighter spacing variant */
+.section-text.tight {
+  max-width: 42rem;
+}
+
+/* Optional left-aligned sections */
+.section-left {
+  text-align: left;
+}
+
+.section-left .section-text {
+  margin-left: 0;
+  margin-right: 0;
+}
