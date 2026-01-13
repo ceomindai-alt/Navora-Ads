@@ -22,13 +22,13 @@ import ThankYou from "./pages/ThankYou";
 import Careers from "./pages/Careers";
 import OurProcess from "./pages/OurProcess";
 import Insights from "./pages/Insights";
-import SmokeCursor from "./components/SmokeCursor";
-import FluidCursor from "./components/FluidCursor";
 import CursorGlow from "./components/CursorGlow";
 import Snowfall from "react-snowfall";
 import HighTicketLanding from "./seo/HighTicketLanding";
+import useSmoothScroll from "./components/useSmoothScroll";
 
 function App() {
+   useSmoothScroll();
   return (
     <>
   
