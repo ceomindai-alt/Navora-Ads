@@ -177,26 +177,6 @@ canvas {
 
 
 
-/* === GLOWING CURVE LINE === */
-.curve-glow {
-  position: absolute;
-  left: 50%;
-  bottom: 48px;
-  width: 110%;
-  height: 70px; /* 🔻 reduced arch height */
-  transform: translateX(-50%);
-  border-radius: 100% 100% 0 0;
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(59,130,246,0.8),
-    rgba(34,211,238,0.8),
-    rgba(59,130,246,0.8),
-    transparent
-  );
-  filter: blur(6px);
-  opacity: 0.85;
-}
 
 /* === ORBIT CONTAINER === */
 .curve-orbit {

@@ -22,7 +22,6 @@ import ThankYou from "./pages/ThankYou";
 import Careers from "./pages/Careers";
 import OurProcess from "./pages/OurProcess";
 import Insights from "./pages/Insights";
-import CursorGlow from "./components/CursorGlow";
 import Snowfall from "react-snowfall";
 import HighTicketLanding from "./seo/HighTicketLanding";
 
@@ -32,7 +31,6 @@ function App() {
     <>
   
     <Snowfall />
-    <CursorGlow />
       <Header />
 
       <Routes>
