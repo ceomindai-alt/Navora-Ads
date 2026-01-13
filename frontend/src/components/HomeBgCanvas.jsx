@@ -14,9 +14,13 @@ export default function HomeBgCanvas() {
     const ctx = canvas.getContext("2d");
     let rafId;
 
-    const device = () => {
-      if (window.innerWidth < 768) return "mobile";
-      if (window.innerWidth < 1024) return "tablet";
+    const getDevice = () => {
+      const w = window.innerWidth;
+      const coarse = window.matchMedia("(pointer: coarse)").matches;
+
+      // 🔥 KEY FIX
+      if (coarse) return "touch";        // mobile + tablet + desktop-mode mobile
+      if (w < 1024) return "tablet";
       return "desktop";
     };
 
@@ -50,7 +54,7 @@ export default function HomeBgCanvas() {
         const t = e.touches[0];
         if (!t) return;
         activate(t.clientX, t.clientY);
-        setTimeout(deactivate, 300);
+        setTimeout(deactivate, 350);
       },
       { passive: true }
     );
@@ -75,8 +79,12 @@ export default function HomeBgCanvas() {
       const offCanvas = document.createElement("canvas");
       const offCtx = offCanvas.getContext("2d");
 
+      const device = getDevice();
+
       const scale =
-        device() === "mobile" ? 1.15 : device() === "tablet" ? 1.45 : 1.7;
+        device === "touch" ? 1.15 :
+        device === "tablet" ? 1.45 :
+        1.7;
 
       offCanvas.width = img.width * scale;
       offCanvas.height = img.height * scale;
@@ -91,15 +99,15 @@ export default function HomeBgCanvas() {
       ).data;
 
       const particles = [];
-      const step = device() === "desktop" ? 3 : 4;
+      const step = device === "desktop" ? 3 : 4;
 
       const centerX = canvas.width / 2;
 
-      // 🔥 FIXED CENTERING
+      // 🔥 FINAL CENTER FIX
       const centerY =
-        device() === "mobile"
-          ? canvas.height * 0.48
-          : device() === "tablet"
+        device === "touch"
+          ? canvas.height * 0.55     // mobile + desktop-view mobile
+          : device === "tablet"
           ? canvas.height * 0.52
           : canvas.height / 2;
 
@@ -125,7 +133,7 @@ export default function HomeBgCanvas() {
       particlesRef.current = particles;
     }
 
-    /* ---------- ANIMATE ---------- */
+    /* ---------- ANIMATION ---------- */
     function animate() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
