@@ -20,7 +20,7 @@ export default function OurProcess() {
       </Helmet>
 
       {/* 1. HERO */}
-      <section className="pt-44 pb-28 px-6 text-center">
+      <section className="pt-44 pb-24 px-6 text-center">
         <div className="max-w-6xl mx-auto">
           <p className="uppercase tracking-widest text-xs text-white/50 mb-6">
             Our Process
@@ -37,7 +37,7 @@ export default function OurProcess() {
       </section>
 
       {/* 2. PHILOSOPHY */}
-      <section className="border-t border-white/10 py-28 px-6">
+      <section className=" py-20 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl font-semibold mb-8">
             Our Growth Philosophy
@@ -51,7 +51,7 @@ export default function OurProcess() {
       </section>
 
       {/* 3. PROCESS STEPS */}
-      <section className="border-t border-white/10 py-28 px-6">
+      <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-8 text-sm text-white/60">
 
           <Step
@@ -82,7 +82,7 @@ export default function OurProcess() {
       </section>
 
       {/* 4. WHAT MAKES OUR PROCESS DIFFERENT */}
-      <section className="border-t border-white/10 py-28 px-6">
+      <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl font-semibold mb-12">
             What Makes Our Process Different
@@ -100,7 +100,7 @@ export default function OurProcess() {
       </section>
 
       {/* 5. TOOLS & PLATFORMS */}
-      <section className="border-t border-white/10 py-28 px-6 text-center">
+      <section className="py-20 px-6 text-center">
         <h2 className="text-3xl font-semibold mb-6">
           Platforms & Technology Ecosystem
         </h2>
@@ -132,7 +132,7 @@ export default function OurProcess() {
       </section>
 
       {/* 6. WHO THIS PROCESS IS FOR */}
-      <section className="border-t border-white/10 py-28 px-6">
+      <section className=" py-20 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl font-semibold mb-8">
             Who This Process Is Designed For
@@ -154,7 +154,7 @@ export default function OurProcess() {
       </section>
 
       {/* 7. CTA */}
-      <section className="border-t border-white/10 py-32 px-6 text-center">
+      <section className=" py-20 px-6 text-center">
         <h2 className="text-4xl font-semibold">
           Ready to Build a Scalable Growth System?
         </h2>
@@ -171,8 +171,8 @@ export default function OurProcess() {
       </section>
 
       {/* 8. DISCLAIMER */}
-      <section className="border-t border-white/10 py-16 px-6 text-center">
-        <p className="text-xs text-white/40 max-w-3xl mx-auto">
+      <section className=" py-8 px-6 text-center">
+        <p className="text-sm text-white/40 max-w-3xl mx-auto">
           Results vary based on industry, market conditions, budget, competition,
           and execution scope. This process does not guarantee specific outcomes.
         </p>

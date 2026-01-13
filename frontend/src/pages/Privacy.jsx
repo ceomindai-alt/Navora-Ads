@@ -26,7 +26,7 @@ export default function PrivacyPolicy() {
       </Helmet>
 
       {/* ================= HERO ================= */}
-      <section className="pt-44 pb-28 px-6 border-b border-white/10">
+      <section className="pt-44 pb-24 px-6 ">
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -44,7 +44,7 @@ export default function PrivacyPolicy() {
       </section>
 
       {/* ================= CONTENT ================= */}
-      <section className="py-28 px-6">
+      <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto space-y-14 text-white/70 text-sm leading-relaxed">
 
           <PolicySection title="1. Overview">

@@ -10,7 +10,7 @@ import SEOCompany from "./seo/SeoCompany";
 import MetaAds from "./seo/MetaAds";
 import GoogleAds from "./seo/GoogleAds";
 import Lead from "./seo/Lead";
-import Privacy from "./pages/privacy";
+import Privacy from "./pages/Privacy";
 import Terms from "./pages/Term";
 import Cookie from "./pages/Cookie";
 import Healthcare from "./pages/Healthcare";
@@ -24,7 +24,7 @@ import OurProcess from "./pages/OurProcess";
 import Insights from "./pages/Insights";
 import Snowfall from "react-snowfall";
 import HighTicketLanding from "./seo/HighTicketLanding";
-
+import Disclaimer from "./pages/Disclaimer";
 
 function App() {
   return (
@@ -45,7 +45,8 @@ function App() {
         <Route path="/google-ads-agency-chennai" element={<GoogleAds />} />
         <Route path="/lead-generation-agency-chennai" element={<Lead />} />
         <Route path="/privacy-policy" element={<Privacy />} />
-        <Route path="/terms-conditions" element={<Terms />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/disclaimer" element={<Disclaimer />} />
         <Route path="/cookie-policy" element={<Cookie />} />
         <Route path="/case-studies/healthcare-performance-marketing" element={<Healthcare />} />
         <Route path="/case-studies/real-estate-lead-generation" element={<RealEstate />} />
@@ -54,7 +55,7 @@ function App() {
         <Route path="/whatsappcta" element={<WhatsAppCTA />} />
         <Route path="/thank-you" element={<ThankYou />} />
         <Route path="/careers" element={<Careers />} />
-        <Route path="/ourprocess" element={<OurProcess />} />
+        <Route path="/our-process" element={<OurProcess />} />
         <Route path="/insights" element={<Insights />} />
         <Route path="/web" element={<HighTicketLanding />} />
       </Routes>

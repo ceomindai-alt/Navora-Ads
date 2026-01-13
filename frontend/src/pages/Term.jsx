@@ -36,7 +36,7 @@ export default function Terms() {
       </section>
 
       {/* CONTENT */}
-      <section className="border-t border-white/10 py-24 px-6">
+      <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto space-y-14 text-white/60 text-sm leading-relaxed">
 
           {/* 1 */}

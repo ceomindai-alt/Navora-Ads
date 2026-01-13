@@ -142,6 +142,10 @@ export function Header() {
 // No missing sections or bars
 
 export function Footer() {
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  };
+
   return (
     <footer className="bg-[#0B0D10] text-white/60 border-t border-white/10">
 
@@ -162,7 +166,10 @@ export function Footer() {
             <div className="text-base space-y-2">
               <p>
                 Email:{" "}
-                <a href="mailto:info@navoraads.com" className="hover:text-white transition">
+                <a
+                  href="mailto:info@navoraads.com"
+                  className="hover:text-white transition"
+                >
                   info@navoraads.com
                 </a>
               </p>
@@ -175,10 +182,10 @@ export function Footer() {
           <div>
             <h4 className="text-white font-medium mb-6">Company</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/careers">Careers</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
+              <li><Link to="/" onClick={scrollTop}>Home</Link></li>
+              <li><Link to="/about" onClick={scrollTop}>About</Link></li>
+              <li><Link to="/careers" onClick={scrollTop}>Careers</Link></li>
+              <li><Link to="/contact" onClick={scrollTop}>Contact</Link></li>
             </ul>
           </div>
 
@@ -186,10 +193,10 @@ export function Footer() {
           <div>
             <h4 className="text-white font-medium mb-6">Expertise</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link to="/services">Services</Link></li>
-              <li><Link to="/case-studies">Case Studies</Link></li>
-              <li><Link to="/our-process">Our Process</Link></li>
-              <li><Link to="/insights">Insights</Link></li>
+              <li><Link to="/services" onClick={scrollTop}>Services</Link></li>
+              <li><Link to="/case-studies" onClick={scrollTop}>Case Studies</Link></li>
+              <li><Link to="/our-process" onClick={scrollTop}>Our Process</Link></li>
+              <li><Link to="/insights" onClick={scrollTop}>Insights</Link></li>
             </ul>
           </div>
 
@@ -197,9 +204,9 @@ export function Footer() {
           <div>
             <h4 className="text-white font-medium mb-6">Legal</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link to="/privacy-policy">Privacy Policy</Link></li>
-              <li><Link to="/terms">Terms & Conditions</Link></li>
-              <li><Link to="/disclaimer">Disclaimer</Link></li>
+              <li><Link to="/privacy-policy" onClick={scrollTop}>Privacy Policy</Link></li>
+              <li><Link to="/terms" onClick={scrollTop}>Terms & Conditions</Link></li>
+              <li><Link to="/disclaimer" onClick={scrollTop}>Disclaimer</Link></li>
             </ul>
           </div>
 
@@ -207,13 +214,12 @@ export function Footer() {
           <div>
             <h4 className="text-white font-medium mb-6">We are</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link to="/digital-marketing-agency-chennai">Digital Marketing Agency Chennai</Link></li>
-              <li><Link to="/seo-company-chennai">SEO Company Chennai</Link></li>
-              <li><Link to="/meta-ads-agency-chennai">Meta Ads Agency Chennai</Link></li>
-              <li><Link to="/google-ads-agency-chennai">Google Ads Agency Chennai</Link></li>
-                            <li><Link to="/web">Web</Link></li>
-
-              <li><Link to="/lead-generation-agency-chennai">Lead Generation Agency Chennai</Link></li>
+              <li><Link to="/digital-marketing-agency-chennai" onClick={scrollTop}>Digital Marketing Agency Chennai</Link></li>
+              <li><Link to="/seo-company-chennai" onClick={scrollTop}>SEO Company Chennai</Link></li>
+              <li><Link to="/meta-ads-agency-chennai" onClick={scrollTop}>Meta Ads Agency Chennai</Link></li>
+              <li><Link to="/google-ads-agency-chennai" onClick={scrollTop}>Google Ads Agency Chennai</Link></li>
+              <li><Link to="/web" onClick={scrollTop}>Web</Link></li>
+              <li><Link to="/lead-generation-agency-chennai" onClick={scrollTop}>Lead Generation Agency Chennai</Link></li>
             </ul>
           </div>
 
@@ -222,7 +228,6 @@ export function Footer() {
 
       {/* SOCIAL ICONS */}
       <div className="flex justify-center items-center gap-5 text-2xl mb-6">
-        
         <a href="https://www.facebook.com/profile.php?id=61573690134638" target="_blank" rel="noopener noreferrer" className="text-[#1877F2] hover:scale-110 transition"><FaFacebook /></a>
         <a href="https://x.com/navoraads" target="_blank" rel="noopener noreferrer" className="text-[#1DA1F2] hover:scale-110 transition"><FaTwitter /></a>
         <a href="https://www.youtube.com/@Officevlogs12" target="_blank" rel="noopener noreferrer" className="text-[#FF0000] hover:scale-110 transition"><FaYoutube /></a>
@@ -232,8 +237,6 @@ export function Footer() {
         <a href="https://pinterest.com/navoraads" target="_blank" rel="noopener noreferrer" className="text-[#E60023] hover:scale-110 transition"><FaPinterest /></a>
         <a href="https://threads.net/@navoraads" target="_blank" rel="noopener noreferrer" className="text-white hover:scale-110 transition"><SiThreads /></a>
       </div>
-        {/* icons unchanged */}
-  
 
       {/* BOTTOM BAR */}
       <div className="border-t border-white/10">
