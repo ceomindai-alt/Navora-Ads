@@ -25,11 +25,13 @@ import Insights from "./pages/Insights";
 import Snowfall from "react-snowfall";
 import HighTicketLanding from "./seo/HighTicketLanding";
 import Disclaimer from "./pages/Disclaimer";
+import GlobalH2ScrollReveal from "./components/GlobalH2ScrollReveal";
+
 
 function App() {
   return (
     <>
-  
+  <GlobalH2ScrollReveal />
     <Snowfall />
       <Header />
 

@@ -47,7 +47,7 @@ export default function Careers() {
           <p className="uppercase tracking-widest text-xs text-white/50 mb-6">
             Careers at Navora Ads
           </p>
-          <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
+          <h1 className=" text-4xl md:text-6xl font-semibold leading-tight">
             Build systems that
             <br /> scale real businesses.
           </h1>
@@ -61,7 +61,7 @@ export default function Careers() {
       {/* 2. WHY WORK HERE */}
       <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl font-semibold mb-8">Why Work at Navora Ads</h2>
+          <h2 className="reveal-text text-3xl font-semibold mb-8">Why Work at Navora Ads</h2>
           <p className="text-white/60 text-lg max-w-4xl mx-auto">
             Navora Ads operates like a growth consulting firm. We prioritize
             clarity, accountability, and measurable outcomes — not volume or
@@ -77,7 +77,7 @@ export default function Careers() {
 
     {/* SECTION HEADER */}
     <div className="mb-12 max-w-3xl">
-      <h2 className="text-3xl font-semibold mb-4 text-white">
+      <h2 className="reveal-text text-3xl font-semibold mb-4 text-white">
         How We Work
       </h2>
       <p className="text-white/50 text-lg">
@@ -195,7 +195,7 @@ export default function Careers() {
 
     {/* LEFT CONTENT */}
     <div>
-      <h2 className="text-3xl font-semibold mb-6">
+      <h2 className="reveal-text text-3xl font-semibold mb-6">
         Who We Collaborate With
       </h2>
       <p className="text-white/60 text-lg max-w-xl leading-relaxed">
@@ -283,7 +283,7 @@ export default function Careers() {
       {/* 5. CAREERS */}
       <section className=" py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-semibold mb-6">
+          <h2 className="reveal-text text-3xl font-semibold mb-6">
             Professional Careers
           </h2>
           <p className="text-white/60 text-lg max-w-4xl">
@@ -307,7 +307,7 @@ export default function Careers() {
       {/* 6. INTERNSHIPS */}
       <section className="py-4 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-semibold mb-6">
+          <h2 className="reveal-text text-3xl font-semibold mb-6">
             Internships & Learning
           </h2>
           <p className="text-white/60 text-lg max-w-4xl">
@@ -339,7 +339,7 @@ export default function Careers() {
       {/* 8. APPLICATION PROCESS */}
 {/* 8. APPLICATION PROCESS */}
 <section className="py-20 px-6 text-center">
-  <h2 className="section-title mb-14">Application Process</h2>
+  <h2 className="reveal-text section-title mb-14">Application Process</h2>
 
   <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-6">
     {[

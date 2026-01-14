@@ -114,7 +114,7 @@ export default function FounderSection() {
 
         {/* TEXT */}
         <div className="pt-6 md:pt-12">
-          <h2 className="text-3xl md:text-4xl font-semibold text-white mb-5">
+          <h2 className="reveal-text text-3xl md:text-4xl font-semibold text-white mb-5">
             Founder-Led. Consulting-Driven.
           </h2>
           <p className="text-white/70 leading-relaxed max-w-md">

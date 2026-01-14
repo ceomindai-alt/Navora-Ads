@@ -234,7 +234,7 @@ const handleSubmit = async (e) => {
       {/* WHAT HAPPENS NEXT */}
       <section className="py-18 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-semibold mb-10">
+          <h2 className="reveal-text text-3xl font-semibold mb-10">
             What Happens Next
           </h2>
           <div className="grid md:grid-cols-4 gap-6 text-base text-white/60">

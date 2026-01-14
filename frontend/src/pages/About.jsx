@@ -175,7 +175,7 @@ export default function AboutPage() {
 </Section>
 
       {/* ================= GLOBAL PRESENCE ================= */}
-      <Section title="Our Presence">
+      <Section className="reveal-text" title="Our Presence">
         <div className="max-w-4xl mx-auto text-white/70 text-lg space-y-3">
           <p><strong>Headquarters:</strong> Chennai, India</p>
           <p><strong>Markets Served:</strong> India · United Kingdom · United States · UAE</p>
@@ -185,7 +185,7 @@ export default function AboutPage() {
 
       {/* ================= FINAL CTA ================= */}
       <section className="py-20 px-6 text-center">
-        <h2 className="text-4xl font-semibold">Let’s Build Something Scalable</h2>
+        <h2 className="reveal-text text-4xl font-semibold">Let’s Build Something Scalable</h2>
         <p className="mt-6 text-white/70 max-w-3xl mx-auto text-lg">
           If you’re looking for a digital growth partner focused on clarity,
           systems, and long-term value creation, Navora Ads is built for you.
@@ -211,7 +211,7 @@ function Section({ title, children }) {
       viewport={{ once: true }}
       className="py-18 px-6 text-center"
     >
-      <h2 className="text-3xl md:text-4xl font-semibold">{title}</h2>
+      <h2 className="reveal-text text-3xl md:text-4xl font-semibold">{title}</h2>
       <div className="mt-10">{children}</div>
     </motion.section>
   );

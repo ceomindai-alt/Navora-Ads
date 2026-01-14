@@ -235,3 +235,38 @@ canvas {
 nav::-webkit-scrollbar {
   display: none;
 }
+
+
+/* ===== Scroll Reveal Text ===== */
+
+.reveal-text {
+  display: block;
+}
+
+.reveal-word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.reveal-char {
+  display: inline-block;
+  opacity: 0.25;
+  transform: translateY(6px);
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+/* ===== Tag-based tuning ===== */
+
+h1.reveal-text .reveal-char {
+  transition-duration: 0.45s;
+}
+
+h2.reveal-text .reveal-char {
+  transition-duration: 0.35s;
+}
+
+h3.reveal-text .reveal-char {
+  transition-duration: 0.25s;
+}

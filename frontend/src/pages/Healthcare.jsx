@@ -187,7 +187,7 @@ export default function HealthcareCaseStudy() {
       </Section>
 
       {/* CTA */}
-      <section className="border-t border-white/10 py-32 px-6 text-center">
+      <section className="py-32 px-6 text-center">
         <h2 className="text-4xl font-semibold">
           Need Compliance-Safe Healthcare Growth?
         </h2>

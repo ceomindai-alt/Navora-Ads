@@ -256,7 +256,7 @@ export default function CoursesPage() {
 
       {/* FINAL CTA */}
       <Section className="border-t border-white/10 py-36 px-6 text-center">
-        <h2 className="text-3xl font-semibold">Learn Skills That Actually Scale</h2>
+        <h2 className="reveal-text text-3xl font-semibold">Learn Skills That Actually Scale</h2>
         <p className="mt-6 text-white/60 max-w-2xl mx-auto">
           Whether you want a career in digital marketing or to grow your business, Navora Ads Academy is built for real outcomes.
         </p>
@@ -281,7 +281,7 @@ function Section({ title, children }) {
       viewport={{ once: true }}
       className="py-20 px-6 text-center"
     >
-      <h2 className="section-title">{title}</h2>
+      <h2 className="reveal-text section-title">{title}</h2>
       <div className="mt-6">{children}</div>
     </motion.section>
   );

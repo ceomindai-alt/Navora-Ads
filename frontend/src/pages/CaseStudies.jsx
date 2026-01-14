@@ -148,7 +148,7 @@ export default function CaseStudiesPage() {
 
       {/* PLATFORM EXPERIENCE */}
       <section className=" py-20 px-6 text-center overflow-hidden">
-  <h2 className="text-3xl font-semibold mb-6">
+  <h2 className="reveal-text text-3xl font-semibold mb-6">
     Campaign Experience Across Platforms
   </h2>
 
@@ -208,7 +208,7 @@ export default function CaseStudiesPage() {
 
       {/* PROCESS */}
       <section className=" py-20 px-6 text-center">
-  <h2 className="text-3xl font-semibold mb-12">
+  <h2 className="reveal-text text-3xl font-semibold mb-12">
     How These Results Are Achieved
   </h2>
 
@@ -256,7 +256,7 @@ export default function CaseStudiesPage() {
       {/* FAQs */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-semibold text-center mb-12">Common Questions</h2>
+          <h2 className="reveal-text text-3xl font-semibold text-center mb-12">Common Questions</h2>
           <div className="space-y-6">
             <FAQ q="Do you guarantee results?" a="No. Performance depends on market, budget, competition, and execution." />
             <FAQ q="What budgets are these results based on?" a="Structured marketing budgets focused on scalable growth." />
@@ -268,7 +268,7 @@ export default function CaseStudiesPage() {
 
       {/* CTA */}
       <section className=" py-20 px-6 text-center">
-        <h2 className="text-4xl font-semibold">Ready to Build Predictable Growth?</h2>
+        <h2 className="reveal-text text-4xl font-semibold">Ready to Build Predictable Growth?</h2>
         <p className="mt-6 text-white/60 max-w-3xl mx-auto">
           We work with a limited number of brands each quarter to maintain
           execution quality.

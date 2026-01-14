@@ -256,7 +256,7 @@ export default function CapabilitiesSection() {
 
   return (
     <section className="relative w-full  px-6 md:px-24 py-24">
-      <h2 className="h2-unified mb-12 text-center">
+      <h2 className="reveal-text h2-unified mb-12 text-center">
   Our Core Digital Marketing Capabilities
 </h2>
 

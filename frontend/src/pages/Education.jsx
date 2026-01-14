@@ -118,7 +118,7 @@ function Section({ title, children }) {
 
 function CTA() {
   return (
-    <section className="border-t border-white/10 py-32 px-6 text-center">
+    <section className="py-20 px-6 text-center">
       <h2 className="text-4xl font-semibold">
         Ready to Build Predictable Growth?
       </h2>

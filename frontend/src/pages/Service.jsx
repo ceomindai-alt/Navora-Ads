@@ -98,7 +98,7 @@ export default function ServicesPage() {
       </Section>
 
       {/* SERVICES */}
-      <section className=" py-20 px-6">
+      <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="section-title text-center">Our Services</h2>
           <div className="mt-24 grid md:grid-cols-2 gap-14">
@@ -158,7 +158,7 @@ export default function ServicesPage() {
 
       {/* INDUSTRIES */}
 <Section>
-  <h2 className="section-title">
+  <h2 className="reveal-text section-title">
     Industries We Serve Across Chennai & Beyond
   </h2>
 
@@ -206,7 +206,7 @@ export default function ServicesPage() {
 
       {/* CTA */}
       <section className=" py-20 px-6 text-center">
-        <h2 className="text-3xl font-semibold">Ready to Scale?</h2>
+        <h2 className="reveal-text text-3xl font-semibold">Ready to Scale?</h2>
         <p className="mt-6 text-white/60">Apply for a strategy call with Navora Ads.</p>
         <a href="https://wa.me/919952957187" className="shimmer-btn inline-block mt-10 rounded-full bg-[#2F8CFF] px-14 py-4">Apply for a Strategy Call</a>
       </section>
@@ -218,7 +218,7 @@ export default function ServicesPage() {
 function Section({ title, subtitle, children }) {
   return (
     <motion.section variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="py-18 px-6 text-center">
-      <h2 className="section-title">{title}</h2>
+      <h2 className="reveal-text section-title">{title}</h2>
       {subtitle && <p className="section-text">{subtitle}</p>}
       <div className="max-w-5xl mx-auto">{children}</div>
     </motion.section>

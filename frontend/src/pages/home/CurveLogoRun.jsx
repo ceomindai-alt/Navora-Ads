@@ -31,7 +31,7 @@ export default function CurveLogoRun() {
 
       {/* TITLE */}
       <div className="text-center mb-12 px-4">
-        <h2 className="text-2xl md:text-3xl font-bold text-white">
+        <h2 className="reveal-text text-3xl md:text-4xl font-bold text-white">
           Trusted by Industry Leaders
         </h2>
         <p className="text-gray-400 mt-3 text-sm md:text-base">
