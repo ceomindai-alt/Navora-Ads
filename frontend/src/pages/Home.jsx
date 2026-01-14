@@ -265,20 +265,29 @@ const faqSchema = {
             <a
   href="https://wa.me/919952957187"
   className="
-    shimmer-btn rounded-full bg-[#2F8CFF] font-medium
+    shimmer-btn rounded-full bg-[#2F8CFF] font-medium leading-none text-white
 
     /* MOBILE */
-    px-4 py-2 text-xs
+    px-3 py-1.5 text-[11px]
 
     /* TABLET */
-    sm:px-6 sm:py-2.5 sm:text-sm
+    sm:px-5 sm:py-2 sm:text-xs
 
     /* DESKTOP */
     md:px-12 md:py-4 md:text-sm
   "
 >
-  Apply for a Strategy Call
+  {/* MOBILE TEXT */}
+  <span className="inline sm:hidden">
+    Strategy Call
+  </span>
+
+  {/* TABLET + DESKTOP TEXT */}
+  <span className="hidden sm:inline">
+    Apply for a Strategy Call
+  </span>
 </a>
+
 
             <a
               href="#case-studies"
