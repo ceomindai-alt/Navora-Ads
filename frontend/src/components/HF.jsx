@@ -245,7 +245,7 @@ export function Footer() {
               <li><Link to="/seo-company-chennai" onClick={scrollTop}>SEO Company Chennai</Link></li>
               <li><Link to="/meta-ads-agency-chennai" onClick={scrollTop}>Meta Ads Agency Chennai</Link></li>
               <li><Link to="/google-ads-agency-chennai" onClick={scrollTop}>Google Ads Agency Chennai</Link></li>
-              <li><Link to="/web" onClick={scrollTop}>Web</Link></li>
+              <li><Link to="/web" onClick={scrollTop}>Website Agency Chennai</Link></li>
               <li><Link to="/lead-generation-agency-chennai" onClick={scrollTop}>Lead Generation Agency Chennai</Link></li>
             </ul>
           </div>
