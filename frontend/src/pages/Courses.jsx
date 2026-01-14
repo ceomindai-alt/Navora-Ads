@@ -3,7 +3,7 @@
 // React 19 + Tailwind CSS + Framer Motion
 import Tilt3D from "../components/Tilt3D";
 import { TiltCard } from "../components/TiltCard";
-
+import { useNavigate } from "react-router-dom";
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
@@ -12,7 +12,8 @@ const fadeUp = {
   visible: { opacity: 1, y: 0 },
 };
 
-export default function CoursesPage() {
+export default function CoursesPage() {const navigate = useNavigate();
+
   return (
     <main className="bg-[#0B0D10] text-[#F5F7FA] overflow-hidden">
 
@@ -132,7 +133,8 @@ export default function CoursesPage() {
       </Section>
 
       {/* DELIVERY MODE */}
-      <Section title="Learning Format">
+      {/* DELIVERY MODE */}
+<Section title="Learning Format">
   <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
     {[
@@ -155,8 +157,9 @@ export default function CoursesPage() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        whileTap={{ scale: 0.98 }}          // ✅ mobile click feedback
-        className="group relative h-full"
+        whileTap={{ scale: 0.98 }}
+        className="group relative h-full cursor-pointer"
+        onClick={() => navigate("/contact")}
       >
         <Tilt3D>
           <TiltCard
@@ -191,38 +194,15 @@ export default function CoursesPage() {
             />
 
             {/* TITLE */}
-            <h3
-              className="
-                relative z-10
-                text-lg font-medium
-                transition-colors duration-300
-                group-hover:text-white
-              "
-            >
+            <h3 className="relative z-10 text-lg font-medium transition-colors duration-300 group-hover:text-white">
               {t}
             </h3>
 
             {/* SEPARATOR */}
-            <div
-              className="
-                relative z-10
-                mx-auto my-4 h-[1px] w-12
-                bg-white/20
-                transition-all duration-300
-                group-hover:w-20
-                group-hover:bg-[#2F8CFF]/70
-              "
-            />
+            <div className="relative z-10 mx-auto my-4 h-[1px] w-12 bg-white/20 transition-all duration-300 group-hover:w-20 group-hover:bg-[#2F8CFF]/70" />
 
             {/* DESCRIPTION */}
-            <p
-              className="
-                relative z-10
-                text-sm text-white/60 leading-relaxed
-                transition-colors duration-300
-                group-hover:text-white/85
-              "
-            >
+            <p className="relative z-10 text-sm text-white/60 leading-relaxed transition-colors duration-300 group-hover:text-white/85">
               {d}
             </p>
           </TiltCard>
