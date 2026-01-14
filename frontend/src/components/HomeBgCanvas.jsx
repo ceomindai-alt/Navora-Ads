@@ -82,7 +82,7 @@ export default function HomeBgCanvas() {
       const device = getDevice();
 
       const scale =
-        device === "touch" ? 0.95 :
+        device === "touch" ? 0.90 :
         device === "tablet" ? 1.45 :
         1.7;
 

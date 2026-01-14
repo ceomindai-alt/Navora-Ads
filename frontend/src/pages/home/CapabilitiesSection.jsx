@@ -103,7 +103,7 @@ function ParticleMorph({ text, iconSVG }) {
 
     let t = 0;
     const animate = () => {
-      t += 0.008;
+      t += 0.012;
       const pos = geometry.attributes.position.array;
 
       if (!morphingRef.current) {
@@ -114,7 +114,7 @@ function ParticleMorph({ text, iconSVG }) {
         geometry.attributes.position.needsUpdate = true;
       }
 
-      particles.rotation.y += 0.0012;
+      particles.rotation.y += 0.004;
       renderer.render(scene, camera);
       frameRef.current = requestAnimationFrame(animate);
     };

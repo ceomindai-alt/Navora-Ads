@@ -263,11 +263,23 @@ const faqSchema = {
 
           <div className="mt-20 flex justify-center items-center gap-6">
             <a
-              href="https://wa.me/919952957187"
-              className="shimmer-btn rounded-full bg-[#2F8CFF] px-12 py-4 text-sm font-medium"
-            >
-              Apply for a Strategy Call
-            </a>
+  href="https://wa.me/919952957187"
+  className="
+    shimmer-btn rounded-full bg-[#2F8CFF] font-medium
+
+    /* MOBILE */
+    px-4 py-2 text-xs
+
+    /* TABLET */
+    sm:px-6 sm:py-2.5 sm:text-sm
+
+    /* DESKTOP */
+    md:px-12 md:py-4 md:text-sm
+  "
+>
+  Apply for a Strategy Call
+</a>
+
             <a
               href="#case-studies"
               className="text-sm text-white/60 hover:text-white"
@@ -359,15 +371,9 @@ const faqSchema = {
     </p>
   </div>
 
-  {/* Full-width marquees */}
-  <div className="mt-10 mb-0 space-y-8 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
-
-  <CurveLogoRun />
-
-  </div>
 </section>
 
-
+<CurveLogoRun />
       
       {/* ================= 5. TRUST ================= */}
       <Section >

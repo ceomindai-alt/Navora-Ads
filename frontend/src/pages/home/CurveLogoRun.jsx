@@ -27,7 +27,7 @@ const icons = [
 
 export default function CurveLogoRun() {
   return (
-    <section className="relative w-full py-20 overflow-hidden">
+    <section className="relative w-full py-0  pt-20 overflow-hidden">
 
       {/* TITLE */}
       <div className="text-center mb-12 px-4">
@@ -63,7 +63,7 @@ export default function CurveLogoRun() {
           <path
             d="M 120 250 Q 700 100 1280 250"
             stroke="url(#curveDesktop)"
-            strokeWidth="6"
+            strokeWidth="9"
             strokeLinecap="round"
           />
 
@@ -117,7 +117,7 @@ export default function CurveLogoRun() {
     <path
       d="M 0 330 Q 700 130 1400 330"
       stroke="url(#curveMobile)"
-      strokeWidth="6"
+      strokeWidth="9"
       strokeLinecap="round"
     />
 
@@ -126,7 +126,7 @@ export default function CurveLogoRun() {
       <g key={i}>
         <animateMotion
           dur="64s"                 // 🔥 very slow = smooth spacing
-          begin={`${-i * 7.5}s`}    // 🔥 BIG GAP BETWEEN ICONS
+          begin={`${-i * 6.5}s`}    // 🔥 BIG GAP BETWEEN ICONS
           repeatCount="indefinite"
           rotate="auto"
         >
