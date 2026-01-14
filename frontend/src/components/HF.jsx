@@ -96,7 +96,7 @@ export function Header() {
       {/* ================= MOBILE MENU ================= */}
       {open && (
         <div className="md:hidden bg-[#0B0D10] border-t border-white/10">
-          <div className="px-6 py-8 flex flex-col items-center gap-5 text-sm">
+          <div className="px-6 py-8 flex flex-col items-center gap-5 text-base">
 
             {[
               { name: "Home", path: "/" },
