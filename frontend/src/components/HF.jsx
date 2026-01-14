@@ -2,7 +2,7 @@
 // React 19 + Tailwind CSS
 // Corporate, SEO-safe, production-ready
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { NavLink, Link } from "react-router-dom";
 import logo from "../assets/navora-logo.mp4";
 import {
@@ -33,6 +33,26 @@ const navActive =
 /* ================= HEADER / NAVBAR ================= */
 export function Header() {
   const [open, setOpen] = useState(false);
+  const menuRef = useRef(null);
+
+  /* ================= CLOSE ON OUTSIDE CLICK ================= */
+  useEffect(() => {
+    if (!open) return;
+
+    const handleClickOutside = (e) => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
+  }, [open]);
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-[#0B0D10]/85 backdrop-blur border-b border-white/10">
@@ -44,12 +64,17 @@ export function Header() {
           onClick={scrollToTop}
           className="group flex items-center gap-2 overflow-hidden"
         >
-          <video src={logo} autoPlay muted loop playsInline className="h-12 w-auto" />
+          <video
+            src={logo}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="h-12 w-auto"
+          />
           <span className="navora-brand text-2xl text-white font-semibold tracking-wide">
             Navora <span className="text-[#2F8CFF]">Ads</span>
           </span>
-    
-
         </NavLink>
 
         {/* ================= DESKTOP NAV ================= */}
@@ -60,7 +85,7 @@ export function Header() {
             { name: "Services", path: "/services" },
             { name: "Case Studies", path: "/case-studies" },
             { name: "Courses", path: "/courses" },
-            { name: "Careers", path: "/careers"},
+            { name: "Careers", path: "/careers" },
             { name: "Contact", path: "/contact" },
           ].map(({ name, path }) => (
             <NavLink
@@ -86,25 +111,28 @@ export function Header() {
 
         {/* ================= MOBILE MENU BUTTON ================= */}
         <button
-          className="md:hidden text-white text-xl"
-          onClick={() => setOpen(!open)}
+          className="md:hidden text-white text-2xl leading-none transition-transform duration-200"
+          onClick={() => setOpen((prev) => !prev)}
+          aria-label={open ? "Close menu" : "Open menu"}
         >
-          ☰
+          {open ? "✕" : "☰"}
         </button>
       </div>
 
       {/* ================= MOBILE MENU ================= */}
       {open && (
-        <div className="md:hidden bg-[#0B0D10] border-t border-white/10">
+        <div
+          ref={menuRef}
+          className="md:hidden bg-[#0B0D10] border-t border-white/10"
+        >
           <div className="px-6 py-8 flex flex-col items-center gap-5 text-base">
-
             {[
               { name: "Home", path: "/" },
               { name: "About", path: "/about" },
               { name: "Services", path: "/services" },
               { name: "Case Studies", path: "/case-studies" },
               { name: "Courses", path: "/courses" },
-              { name: "Careers", path: "/careers"},
+              { name: "Careers", path: "/careers" },
               { name: "Contact", path: "/contact" },
             ].map(({ name, path }) => (
               <NavLink
@@ -134,7 +162,6 @@ export function Header() {
     </header>
   );
 }
-
 
 /* ================= FOOTER ================= */
 // Navora Ads — Global Corporate Footer (FINAL)
