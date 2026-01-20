@@ -194,7 +194,7 @@ export default function CaseStudiesPage() {
             className="flex items-center gap-3 border border-white/10
                        rounded-full px-6 py-3 text-white/80
                        backdrop-blur transition
-                       hover:border-white/30 hover:text-white
+                       hover:border-blue-500 hover:text-white
                        whitespace-nowrap"
           >
             <Icon className={`text-xl ${color}`} />
