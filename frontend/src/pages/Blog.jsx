@@ -56,7 +56,7 @@ const blogs = [
   description:
     "A detailed comparison of the best digital marketing agencies in Chennai.",
   image:
-    "https://images.unsplash.com/photo-1557838923-2985c318be48?q=80&w=1200",
+    "https://plus.unsplash.com/premium_photo-1661425715124-310ec1b49b8a?q=80&w=1582&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   link: "/blog/top-20-digital-marketing-companies-in-chennai",
 },
 

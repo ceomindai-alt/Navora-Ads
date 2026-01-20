@@ -24,6 +24,17 @@ export default function CoursesPage() {const navigate = useNavigate();
           name="description"
           content="Navora Ads Academy offers performance-driven digital marketing courses in Chennai. Learn Meta Ads, Google Ads, SEO, funnels, automation, and growth systems from industry practitioners."
         />
+          <link rel="canonical" href="https://www.navoraads.com/courses" />
+
+  {/* ================= OPEN GRAPH ================= */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Digital Marketing Courses & Training | Navora Ads" />
+  <meta
+    property="og:description"
+    content="Practical, performance-driven digital marketing courses designed for students, professionals, and founders."
+  />
+  <meta property="og:url" content="https://www.navoraads.com/courses" />
+  <meta property="og:site_name" content="Navora Ads" />
       </Helmet>
 
       {/* HERO */}

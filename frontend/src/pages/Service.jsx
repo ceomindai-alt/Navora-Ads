@@ -8,6 +8,16 @@ import { motion } from "framer-motion";
 import Tilt3D from "../components/Tilt3D";
 import { TiltCard } from "../components/TiltCard";
 import {Link} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import {
+  Building2,
+  GraduationCap,
+  HeartPulse,
+  ShoppingBag,
+  Plane,
+  Factory
+} from "lucide-react";
+
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -34,6 +44,8 @@ export default function ServicesPage() {
   "description":
     "Performance-driven digital marketing services including Meta Ads, Google Ads, SEO, website optimisation, automation, and scalable growth systems."
 };
+const navigate = useNavigate();
+
 
   return (
     <main className="bg-[#0B0D10] text-[#F5F7FA] overflow-hidden">
@@ -42,6 +54,17 @@ export default function ServicesPage() {
       <Helmet>
   <title>Navora Ads | Performance-Driven Digital Marketing Agency</title>
 
+ <link rel="canonical" href="https://www.navoraads.com/services" />
+
+  {/* ================= OPEN GRAPH ================= */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Digital Marketing Services | Navora Ads" />
+  <meta
+    property="og:description"
+    content="Performance-driven digital marketing services designed to deliver scalable, measurable growth for modern businesses."
+  />
+  <meta property="og:url" content="https://www.navoraads.com/services" />
+  <meta property="og:site_name" content="Navora Ads" />
 
 
   <script type="application/ld+json">
@@ -99,94 +122,160 @@ export default function ServicesPage() {
 
       {/* SERVICES */}
       <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="section-title text-center">Our Services</h2>
-          <div className="mt-24 grid md:grid-cols-2 gap-14">
-  {[
-    {
-      title: "Performance Marketing (Meta & Google Ads)",
-      points: ["Lead generation & sales campaigns","Funnel-based strategy","Creative testing","CPL optimisation"]
-    },
-    {
-      title: "SEO & Local SEO",
-      points: ["Technical SEO","Content & authority","GBP optimisation","Maps ranking"]
-    },
-    {
-      title: "Website Development & CRO",
-      points: ["High-conversion UX","Funnels & landing pages","Speed & SEO","Analytics"]
-    },
-    {
-      title: "Ecommerce Marketing",
-      points: ["Shopify & D2C growth","Marketplace scaling","ROAS optimisation","Offer & funnel strategy"]
-    },
-    {
-      title: "Mobile App Development",
-      points: ["Android & iOS","APIs & payments","Admin dashboards","Scalable architecture"]
-    },
-    {
-      title: "Automation & CRM",
-      points: ["WhatsApp automation","CRM pipelines","Lead scoring","Integrations"]
-    },
-    {
-      title: "Social Media Management",
-      points: ["Content calendars","Community management","Brand consistency","Reporting"]
-    },
-    {
-      title: "Content & Media Production",
-      points: ["Ad creatives","Short-form video","Brand systems","Testing frameworks"]
-    },
-    {
-      title: "Growth Strategy & Consulting",
-      points: ["Audits","Roadmaps","Budget planning","Founder consulting"]
-    },
-  ].map((s) => (
-    <Tilt3D key={s.title}>
-      <TiltCard className="p-8 h-full text-left">
-        <h3 className="text-xl font-medium">{s.title}</h3>
-        <ul className="mt-4 space-y-2 text-sm text-white/60">
-          {s.points.map((p) => (
-            <li key={p}>• {p}</li>
-          ))}
-        </ul>
-      </TiltCard>
-    </Tilt3D>
-  ))}
-</div>
+  <div className="max-w-7xl mx-auto">
+    <h2 className="section-title text-center">Our Services</h2>
 
-        </div>
-      </section>
+    <div className="mt-24 grid md:grid-cols-2 gap-14">
+      {[
+        {
+          title: "Performance Marketing (Meta & Google Ads)",
+          points: ["Lead generation & sales campaigns","Funnel-based strategy","Creative testing","CPL optimisation"]
+        },
+        {
+          title: "SEO & Local SEO",
+          points: ["Technical SEO","Content & authority","GBP optimisation","Maps ranking"]
+        },
+        {
+          title: "Website Development & CRO",
+          points: ["High-conversion UX","Funnels & landing pages","Speed & SEO","Analytics"]
+        },
+        {
+          title: "Ecommerce Marketing",
+          points: ["Shopify & D2C growth","Marketplace scaling","ROAS optimisation","Offer & funnel strategy"]
+        },
+        {
+          title: "Mobile App Development",
+          points: ["Android & iOS","APIs & payments","Admin dashboards","Scalable architecture"]
+        },
+        {
+          title: "Automation & CRM",
+          points: ["WhatsApp automation","CRM pipelines","Lead scoring","Integrations"]
+        },
+        {
+          title: "Social Media Management",
+          points: ["Content calendars","Community management","Brand consistency","Reporting"]
+        },
+        {
+          title: "Content & Media Production",
+          points: ["Ad creatives","Short-form video","Brand systems","Testing frameworks"]
+        },
+        {
+          title: "Growth Strategy & Consulting",
+          points: ["Audits","Roadmaps","Budget planning","Founder consulting"]
+        },
+      ].map((s) => (
+        <Tilt3D key={s.title}>
+          <div
+            role="button"
+            tabIndex={0}
+            onClick={() => {navigate("/contact"); scrollToTop()}}
+            onKeyDown={(e) => e.key === "Enter" && navigate("/contact")}
+            className="cursor-pointer focus:outline-none"
+          >
+            <TiltCard className="p-8 h-full text-left transition-transform duration-300 hover:scale-[1.02]">
+              <h3 className="text-xl font-medium">{s.title}</h3>
+              <ul className="mt-4 space-y-2 text-sm text-white/60">
+                {s.points.map((p) => (
+                  <li key={p}>• {p}</li>
+                ))}
+              </ul>
+            </TiltCard>
+          </div>
+        </Tilt3D>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* INDUSTRIES */}
+
 <Section>
   <h2 className="reveal-text section-title">
     Industries We Serve Across Chennai & Beyond
   </h2>
 
-  <div className="mt-14 grid grid-cols-2 md:grid-cols-3 gap-8 text-sm text-white/60">
+  <div className="mt-14 grid grid-cols-2 md:grid-cols-3 gap-8 text-sm">
     {[
-      { label: "Real Estate", path: "/case-studies/real-estate-lead-generation" },
-      { label: "Education", path: "/case-studies/education-admissions-marketing" },
-      { label: "Healthcare", path: "/case-studies/healthcare-performance-marketing" },
-      { label: "Ecommerce & D2C", path: "/services" },
-      { label: "Travel", path: "/services" },
-      { label: "Manufacturing", path: "/services" },
-    ].map(({ label, path }) => (
+      {
+        label: "Real Estate",
+        path: "/case-studies/real-estate-lead-generation",
+        Icon: Building2,
+      },
+      {
+        label: "Education",
+        path: "/case-studies/education-admissions-marketing",
+        Icon: GraduationCap,
+      },
+      {
+        label: "Healthcare",
+        path: "/case-studies/healthcare-performance-marketing",
+        Icon: HeartPulse,
+      },
+      {
+        label: "Ecommerce & D2C",
+        path: "/services",
+        Icon: ShoppingBag,
+      },
+      {
+        label: "Travel",
+        path: "/services",
+        Icon: Plane,
+      },
+      {
+        label: "Manufacturing",
+        path: "/services",
+        Icon: Factory,
+      },
+    ].map(({ label, path, Icon }) => (
       <Tilt3D key={label}>
-        <Link
-          to={path}
-          onClick={scrollToTop}
-          className="block"
-        >
+        <Link to={path} onClick={scrollToTop} className="block">
           <TiltCard
             className="
-              py-6 text-center
+              relative
+              py-8
+              text-center
               cursor-pointer
-              transition-transform duration-200
-              hover:scale-[1.02]
+              rounded-xl
+              bg-[#0B0D10]
+              border border-white/10
+              text-white/70
+              transition-all duration-300
+              hover:scale-[1.03]
+              hover:border-[#2F8CFF]/40
+              hover:text-white
               active:scale-[0.98]
+              overflow-hidden
             "
           >
-            {label}
+            {/* 🔹 INNER GLOW */}
+            <div
+              className="
+                pointer-events-none
+                absolute inset-0
+                opacity-0
+                hover:opacity-100
+                transition-opacity duration-300
+                bg-[radial-gradient(circle_at_center,rgba(47,140,255,0.18),transparent_70%)]
+              "
+            />
+
+            {/* 🔹 ICON */}
+            <div className="relative flex justify-center mb-4">
+              <Icon
+                size={28}
+                className="
+                  text-[#2F8CFF]/80
+                  transition-transform duration-300
+                  group-hover:scale-110
+                "
+              />
+            </div>
+
+            {/* 🔹 LABEL */}
+            <div className="relative font-medium">
+              {label}
+            </div>
           </TiltCard>
         </Link>
       </Tilt3D>

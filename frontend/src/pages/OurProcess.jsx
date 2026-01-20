@@ -1,9 +1,30 @@
 // Navora Ads — Our Process
 // Global | Corporate | Consulting-Grade
 // React 19 + Tailwind CSS
-
+import { motion } from "framer-motion";
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import {
+  FaFacebook,
+  FaGoogle,
+  FaChartLine,
+  FaTags,
+  FaWordpress,
+  FaShopify,
+  FaRobot,
+  FaCogs
+} from "react-icons/fa";
+
+import { SiSemrush } from "react-icons/si";
+import Tilt3D from "../components/Tilt3D";
+import { TiltCard } from "../components/TiltCard";
+import {
+  Building2,
+  GraduationCap,
+  HeartPulse,
+  ShoppingBag,
+  Briefcase
+} from "lucide-react"
 
 export default function OurProcess() {
   return (
@@ -52,106 +73,300 @@ export default function OurProcess() {
 
       {/* 3. PROCESS STEPS */}
       <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-8 text-sm text-white/60">
+  <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
 
-          <Step
-            step="01"
-            title="Research & Diagnosis"
-            desc="Market analysis, competitor benchmarking, audience intent mapping, funnel review, and data diagnostics."
-          />
+    {[
+      {
+        step: "01",
+        title: "Research & Diagnosis",
+        desc: "Market analysis, competitor benchmarking, audience intent mapping, funnel review, and data diagnostics.",
+      },
+      {
+        step: "02",
+        title: "Strategy & Architecture",
+        desc: "Channel selection, funnel design, KPI definition, budget allocation, and tracking architecture.",
+      },
+      {
+        step: "03",
+        title: "Execution & Deployment",
+        desc: "Campaign launch, creative testing, automation setup, CRM integration, and performance monitoring.",
+      },
+      {
+        step: "04",
+        title: "Scale & Optimisation",
+        desc: "Budget scaling, CPL optimisation, conversion improvements, and system refinement.",
+      },
+    ].map(({ step, title, desc }) => (
+      <motion.div
+        key={step}
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        whileTap={{ scale: 0.98 }}
+        className="group relative h-full cursor-pointer"
+      >
+        <Tilt3D>
+          <TiltCard
+            className="
+              relative h-full min-h-[260px]
+              flex flex-col justify-center text-center
+              p-8
 
-          <Step
-            step="02"
-            title="Strategy & Architecture"
-            desc="Channel selection, funnel design, KPI definition, budget allocation, and tracking architecture."
-          />
+              border border-white/10
+              bg-[#0B0D10]
+              rounded-2xl
 
-          <Step
-            step="03"
-            title="Execution & Deployment"
-            desc="Campaign launch, creative testing, automation setup, CRM integration, and performance monitoring."
-          />
+              transition-all duration-300 ease-out
+              group-hover:border-[#2F8CFF]/50
+              group-hover:shadow-[0_0_45px_rgba(47,140,255,0.22)]
+              active:border-[#2F8CFF]/60
+              active:shadow-[0_0_45px_rgba(47,140,255,0.28)]
+            "
+          >
+            {/* GLOW SWEEP LINE */}
+            <span
+              className="
+                pointer-events-none absolute inset-0
+                rounded-2xl
+                opacity-0 group-hover:opacity-100 group-active:opacity-100
+                transition-opacity duration-300
+              "
+              style={{
+                background:
+                  "linear-gradient(120deg, transparent 30%, rgba(47,140,255,0.35), transparent 70%)",
+              }}
+            />
 
-          <Step
-            step="04"
-            title="Scale & Optimisation"
-            desc="Budget scaling, CPL optimisation, conversion improvements, and system refinement."
-          />
+            {/* STEP NUMBER */}
+            <div className="relative z-10 text-[#2F8CFF]/80 text-sm font-semibold tracking-widest mb-3">
+              {step}
+            </div>
 
-        </div>
-      </section>
+            {/* TITLE */}
+            <h3 className="relative z-10 text-lg font-medium transition-colors duration-300 group-hover:text-white">
+              {title}
+            </h3>
+
+            {/* SEPARATOR */}
+            <div className="relative z-10 mx-auto my-4 h-[1px] w-12 bg-white/20 transition-all duration-300 group-hover:w-20 group-hover:bg-[#2F8CFF]/70" />
+
+            {/* DESCRIPTION */}
+            <p className="relative z-10 text-sm text-white/60 leading-relaxed transition-colors duration-300 group-hover:text-white/85">
+              {desc}
+            </p>
+          </TiltCard>
+        </Tilt3D>
+      </motion.div>
+    ))}
+
+  </div>
+</section>
 
       {/* 4. WHAT MAKES OUR PROCESS DIFFERENT */}
-      <section className="py-20 px-6">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl font-semibold mb-12">
-            What Makes Our Process Different
-          </h2>
+      <section className="py-20 px-6 relative overflow-hidden">
+  {/* background signal */}
+  <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(47,140,255,0.06),transparent_65%)]" />
 
-          <div className="grid md:grid-cols-3 gap-6 text-sm text-white/60">
-            <Card text="Systems-first approach, not isolated tactics" />
-            <Card text="Performance measured by lead quality and ROI" />
-            <Card text="Data-backed decisions, not assumptions" />
-            <Card text="Scalability built into every campaign" />
-            <Card text="Automation and CRM-driven execution" />
-            <Card text="Transparent reporting and accountability" />
+  <div className="relative max-w-5xl mx-auto text-center">
+    <h2 className="text-3xl font-semibold mb-12">
+      What Makes Our Process Different
+    </h2>
+
+    <div className="grid md:grid-cols-3 gap-6 text-sm">
+      {[
+        "Systems-first approach, not isolated tactics",
+        "Performance measured by lead quality and ROI",
+        "Data-backed decisions, not assumptions",
+        "Scalability built into every campaign",
+        "Automation and CRM-driven execution",
+        "Transparent reporting and accountability",
+      ].map((text, i) => (
+        <motion.div
+          key={text}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: i * 0.05 }}
+          className="group relative"
+        >
+          <div
+            className="
+              relative
+              h-full
+              rounded-xl
+              p-6
+              bg-[#0B0D10]
+              border border-white/10
+              text-white/70
+              transition-all duration-300
+              hover:border-[#2F8CFF]/50
+              hover:text-white
+            "
+          >
+            {/* PULSE RING */}
+            <span
+              className="
+                pointer-events-none
+                absolute inset-0
+                rounded-xl
+                opacity-0
+                group-hover:opacity-100
+                animate-[pulse_2.5s_ease-in-out_infinite]
+                bg-[radial-gradient(circle_at_center,rgba(47,140,255,0.12),transparent_65%)]
+              "
+            />
+
+            {/* DIRECTIONAL HIGHLIGHT */}
+            <span
+              className="
+                pointer-events-none
+                absolute left-0 top-0 h-full w-[2px]
+                bg-[#2F8CFF]/40
+                opacity-0
+                group-hover:opacity-100
+                transition-opacity duration-300
+              "
+            />
+
+            {/* CONTENT */}
+            <p className="relative z-10 leading-relaxed">
+              {text}
+            </p>
           </div>
-        </div>
-      </section>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* 5. TOOLS & PLATFORMS */}
       <section className="py-20 px-6 text-center">
-        <h2 className="text-3xl font-semibold mb-6">
-          Platforms & Technology Ecosystem
-        </h2>
-        <p className="text-white/60 max-w-3xl mx-auto">
-          Our process is executed across industry-standard platforms and tools,
-          ensuring compliance, scalability, and performance.
-        </p>
+  <h2 className="text-3xl font-semibold mb-6">
+    Platforms & Technology Ecosystem
+  </h2>
 
-        <div className="mt-12 flex flex-wrap justify-center gap-4 text-sm">
-          {[
-            "Meta Ads",
-            "Google Ads",
-            "Google Analytics",
-            "Google Tag Manager",
-            "SEMrush",
-            "WordPress",
-            "Shopify",
-            "CRM & Automation",
-            "AI & Analytics Tools",
-          ].map((tool) => (
-            <span
-              key={tool}
-              className="border border-white/10 rounded-full px-6 py-3"
-            >
-              {tool}
-            </span>
-          ))}
-        </div>
-      </section>
+  <p className="text-white/60 max-w-3xl mx-auto">
+    Our process is executed across industry-standard platforms and tools,
+    ensuring compliance, scalability, and performance.
+  </p>
+
+  <div className="mt-14 flex flex-wrap justify-center gap-5">
+    {[
+      { label: "Meta Ads", Icon: FaFacebook, color: "#1877F2" },
+      { label: "Google Ads", Icon: FaGoogle, color: "#4285F4" },
+      { label: "Google Analytics", Icon: FaChartLine, color: "#F9AB00" },
+      { label: "Google Tag Manager", Icon: FaTags, color: "#246FDB" },
+      { label: "SEMrush", Icon: SiSemrush, color: "#FF642D" },
+      { label: "WordPress", Icon: FaWordpress, color: "#21759B" },
+      { label: "Shopify", Icon: FaShopify, color: "#95BF47" },
+      { label: "CRM & Automation", Icon: FaCogs, color: "#8B5CF6" },
+      { label: "AI & Analytics Tools", Icon: FaRobot, color: "#22C55E" },
+    ].map(({ label, Icon, color }) => (
+      <div
+        key={label}
+        className="
+          group
+          flex items-center gap-3
+          px-6 py-3
+          rounded-full
+          border border-white/10
+          bg-[#0B0D10]
+          text-sm text-white/70
+          transition-all duration-300
+          hover:border-white/30
+          hover:-translate-y-1
+          hover:shadow-[0_0_30px_rgba(255,255,255,0.08)]
+        "
+      >
+        {/* Color Icon */}
+        <Icon
+          size={18}
+          style={{ color }}
+          className="
+            transition-transform duration-300
+            group-hover:scale-110
+          "
+        />
+
+        <span className="whitespace-nowrap">{label}</span>
+      </div>
+    ))}
+  </div>
+</section>
 
       {/* 6. WHO THIS PROCESS IS FOR */}
-      <section className=" py-20 px-6">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl font-semibold mb-8">
-            Who This Process Is Designed For
-          </h2>
+      <section className="py-20 px-6">
+  <div className="max-w-5xl mx-auto text-center">
+    <h2 className="text-3xl font-semibold mb-8">
+      Who This Process Is Designed For
+    </h2>
 
-          <p className="text-white/60 text-lg max-w-4xl mx-auto">
-            This structured approach is ideal for businesses that value clarity,
-            performance, and sustainable growth — not shortcuts.
-          </p>
+    <p className="text-white/60 text-lg max-w-4xl mx-auto">
+      This structured approach is ideal for businesses that value clarity,
+      performance, and sustainable growth — not shortcuts.
+    </p>
 
-          <div className="mt-10 text-sm text-white/60 space-y-2">
-            <p>• Real Estate Developers & Builders</p>
-            <p>• Educational Institutions & Training Brands</p>
-            <p>• Healthcare & Clinics</p>
-            <p>• Ecommerce & D2C Brands</p>
-            <p>• Service-Based Businesses</p>
+    {/* CARDS */}
+    <div className="mt-12 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+      {[
+        {
+          label: "Real Estate Developers & Builders",
+          Icon: Building2,
+        },
+        {
+          label: "Educational Institutions & Training Brands",
+          Icon: GraduationCap,
+        },
+        {
+          label: "Healthcare & Clinics",
+          Icon: HeartPulse,
+        },
+        {
+          label: "Ecommerce & D2C Brands",
+          Icon: ShoppingBag,
+        },
+        {
+          label: "Service-Based Businesses",
+          Icon: Briefcase,
+        },
+      ].map(({ label, Icon }) => (
+        <div
+          key={label}
+          className="
+            group
+            flex items-center gap-4
+            rounded-xl
+            border border-white/10
+            bg-[#0B0D10]
+            px-6 py-5
+            text-left
+
+            transition-all duration-300
+            hover:border-[#2F8CFF]/40
+            hover:shadow-[0_0_30px_rgba(47,140,255,0.15)]
+          "
+        >
+          {/* ICON */}
+          <div
+            className="
+              flex h-10 w-10 items-center justify-center
+              rounded-full
+              bg-[#2F8CFF]/10
+            "
+          >
+            <Icon className="h-5 w-5 text-[#2F8CFF]" />
           </div>
+
+          {/* TEXT */}
+          <p className="text-sm text-white/80 leading-snug">
+            {label}
+          </p>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* 7. CTA */}
       <section className=" py-20 px-6 text-center">

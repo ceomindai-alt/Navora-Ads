@@ -9,6 +9,7 @@ import WhatsAppCTA from "../components/WhatsAppCTA";
 import emailjs from "@emailjs/browser";
 import AnimatedSubmitButton from "../components/AnimatedSubmitButton";
 
+
 emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
 
 export default function Contact() {
@@ -31,7 +32,26 @@ const handleSubmit = async (e) => {
     return;
   }
 
+   // ✅ WhatsApp (OPEN FIRST – popup-safe)
+    const whatsappNumber = "919876543210";
+    const whatsappMessage = `
+New Website Lead 🚀
 
+Name: ${form.name}
+Email: ${form.email}
+Phone: ${form.number}
+Company: ${form.company || "N/A"}
+Budget: ${form.budget || "Not specified"}
+
+Message:
+${form.message || "No message provided"}
+    `;
+
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      whatsappMessage.trim()
+    )}`;
+
+    window.open(whatsappURL, "_blank");
 
   try {
     // 1️⃣ EmailJS
@@ -161,14 +181,18 @@ const handleSubmit = async (e) => {
                 required
               />
               <input
-                name="number"
-                value={form.number}
-                onChange={handleChange}
-                type="number"
-                placeholder="Number *"
-                className="w-full bg-transparent border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-[#2F8CFF]"
-                required
-              />
+  name="number"
+  value={form.number}
+  onChange={handleChange}
+  type="tel"
+  inputMode="numeric"
+  pattern="[6-9][0-9]{9}"
+  maxLength={10}
+  placeholder="Mobile Number *"
+  className="w-full bg-transparent border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-[#2F8CFF]"
+  required
+/>
+
               <input
                 name="company"
                 value={form.company}
