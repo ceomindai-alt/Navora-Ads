@@ -22,6 +22,7 @@ export default function MetaAdsAgencyChennai() {
           name="description"
           content="Navora Ads is a performance-driven Meta Ads agency in Chennai helping businesses scale through Facebook & Instagram ads with ROI-focused strategies."
         />
+        <link rel="canonical" href="https://www.navoraads.com/meta-ads-agency-chennai" />
         <link rel="canonical" href="https://navoraads.com/meta-ads-agency-chennai" />
       </Helmet>
 

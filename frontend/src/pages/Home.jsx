@@ -179,6 +179,7 @@ const faqSchema = {
 
           {/* Canonical */}
           <link rel="canonical" href="https://navoraads.com/" />
+           <link rel="canonical" href="https://www.navoraads.com/" />
 
           {/* Viewport */}
           <meta name="viewport" content="width=device-width, initial-scale=1" />

@@ -22,6 +22,7 @@ export default function GoogleAdsAgencyChennai() {
           name="description"
           content="Navora Ads is a performance-driven Google Ads agency in Chennai helping businesses generate high-intent leads and sales through Search, Display, and YouTube ads."
         />
+        <link rel="canonical" href="https://www.navoraads.com/google-ads-agency-chennai" />
         <link rel="canonical" href="https://navoraads.com/google-ads-agency-chennai" />
       </Helmet>
 
