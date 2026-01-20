@@ -73,7 +73,7 @@ export default function RealEstateCaseStudy() {
     property marketing ecosystems.
   </p>
 
-  <div className="mt-10 grid md:grid-cols-2 gap-6 text-sm">
+  <div className="mt-10 grid md:grid-cols-2 gap-6 text-base">
 
     {/* CARD 1 */}
     <div className="border-wrapper relative rounded-2xl p-[3px] overflow-hidden transition-all duration-300">
