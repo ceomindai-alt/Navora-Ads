@@ -126,31 +126,83 @@ export default function AboutPage() {
 
       {/* ================= VALUES ================= */}
       <Section title="Our Values">
-        <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-  {[
-    {
-      t: "Performance First",
-      d: "Every strategy and decision is measured by ROI, efficiency, and business impact.",
-    },
-    {
-      t: "Radical Transparency",
-      d: "Clear reporting, honest communication, and no inflated promises.",
-    },
-    {
-      t: "Systems Thinking",
-      d: "We build scalable frameworks, not one-off tactics or shortcuts.",
-    },
-  ].map(({ t, d }) => (
-    <Tilt3D key={t}>
-      <TiltCard className="p-10 h-full text-center">
-        <h3 className="text-xl font-medium">{t}</h3>
-        <p className="mt-4 text-white/70 text-base">{d}</p>
-      </TiltCard>
-    </Tilt3D>
-  ))}
-</div>
+  <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
 
-      </Section>
+    {[
+      {
+        t: "Performance First",
+        d: "Every strategy and decision is measured by ROI, efficiency, and business impact.",
+      },
+      {
+        t: "Radical Transparency",
+        d: "Clear reporting, honest communication, and no inflated promises.",
+      },
+      {
+        t: "Systems Thinking",
+        d: "We build scalable frameworks, not one-off tactics or shortcuts.",
+      },
+    ].map(({ t, d }) => (
+      <motion.div
+        key={t}
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        whileTap={{ scale: 0.98 }}
+        className="group relative h-full"
+      >
+        <Tilt3D>
+          <TiltCard
+            className="
+              relative h-full min-h-[260px]
+              flex flex-col justify-center text-center
+              p-10
+
+              border border-white/10
+              bg-[#0B0D10]
+              rounded-2xl
+
+              transition-all duration-300 ease-out
+              group-hover:border-[#2F8CFF]/50
+              group-hover:shadow-[0_0_45px_rgba(47,140,255,0.22)]
+              active:border-[#2F8CFF]/60
+              active:shadow-[0_0_45px_rgba(47,140,255,0.28)]
+            "
+          >
+            {/* GLOW SWEEP LINE */}
+            <span
+              className="
+                pointer-events-none absolute inset-0
+                rounded-2xl
+                opacity-0 group-hover:opacity-100 group-active:opacity-100
+                transition-opacity duration-300
+              "
+              style={{
+                background:
+                  "linear-gradient(120deg, transparent 30%, rgba(47,140,255,0.35), transparent 70%)",
+              }}
+            />
+
+            {/* TITLE */}
+            <h3 className="relative z-10 text-xl font-medium transition-colors duration-300 group-hover:text-white">
+              {t}
+            </h3>
+
+            {/* SEPARATOR */}
+            <div className="relative z-10 mx-auto my-5 h-[1px] w-12 bg-white/20 transition-all duration-300 group-hover:w-20 group-hover:bg-[#2F8CFF]/70" />
+
+            {/* DESCRIPTION */}
+            <p className="relative z-10 text-sm text-white/70 leading-relaxed transition-colors duration-300 group-hover:text-white/85">
+              {d}
+            </p>
+          </TiltCard>
+        </Tilt3D>
+      </motion.div>
+    ))}
+
+  </div>
+</Section>
+
 
       {/* ================= DIFFERENTIATION ================= */}
       {/* ================= DIFFERENTIATION ================= */}

@@ -320,25 +320,68 @@ const faqSchema = {
 
       {/* ================= GROWTH FRAMEWORK ================= */}
       <Section className="border-t border-white/10 py-20 px-6 lg:px-0">
-        <div className="max-w-6xl mx-auto text-center">
-          <ScrollRevealText />
-          <div className="mt-16 grid md:grid-cols-4 gap-10 text-left">
-            {[
-              ["Research", "Market, audience & demand analysis"],
-              ["Build", "Funnels, systems & performance architecture"],
-              ["Scale", "Channel expansion & budget optimisation"],
-              ["Optimise", "Continuous performance refinement"],
-            ].map(([t, d]) => (
-              <Tilt3D key={t}>
-      <TiltCard className="p-8 h-full">
-        <h3 className="text-lg font-medium">{t}</h3>
-        <p className="mt-3 text-sm text-white/60">{d}</p>
-      </TiltCard>
-    </Tilt3D>
-            ))}
-          </div>
-        </div>
-      </Section>
+  <div className="max-w-6xl mx-auto text-center">
+    <ScrollRevealText />
+
+    <div className="mt-16 grid md:grid-cols-4 gap-10 text-left">
+      {[
+        ["Research", "Market, audience & demand analysis"],
+        ["Build", "Funnels, systems & performance architecture"],
+        ["Scale", "Channel expansion & budget optimisation"],
+        ["Optimise", "Continuous performance refinement"],
+      ].map(([t, d]) => (
+        <Tilt3D key={t}>
+          <TiltCard
+            className="
+              relative
+              p-8 h-full
+              border border-white/15
+              bg-[#0B0D10]
+              rounded-xl
+              overflow-hidden
+            "
+          >
+            {/* BORDER RUN EFFECT */}
+            <span
+              className="pointer-events-none absolute inset-0 rounded-xl"
+              style={{
+                background:
+                  "linear-gradient(90deg, transparent 0%, #2F8CFF 50%, transparent 100%)",
+                backgroundSize: "200% 100%",
+                animation: "borderRun 3s linear infinite",
+                mask:
+                  "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                WebkitMask:
+                  "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                maskComposite: "exclude",
+                WebkitMaskComposite: "xor",
+                padding: "1px",
+              }}
+            />
+
+            <h3 className="relative z-10 text-lg font-medium text-white">
+              {t}
+            </h3>
+
+            <p className="relative z-10 mt-3 text-sm text-white/60">
+              {d}
+            </p>
+          </TiltCard>
+        </Tilt3D>
+      ))}
+    </div>
+  </div>
+
+  {/* KEYFRAMES — INCLUDE ONCE PER PAGE */}
+  <style>
+    {`
+      @keyframes borderRun {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 200% 50%; }
+      }
+    `}
+  </style>
+</Section>
 
       {/* ================= CAPABILITIES ================= */}
      <CapabilitiesSection />
@@ -442,51 +485,132 @@ const faqSchema = {
   <div className="mt-16 grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
 
     {/* IDEAL FIT */}
-    <Tilt3D>
-      <TiltCard className="p-10 h-full text-left">
-        <h3 className="text-lg font-medium text-white mb-6">
-          Ideal Fit
-        </h3>
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      whileTap={{ scale: 0.98 }}
+      className="group relative h-full"
+    >
+      <Tilt3D>
+        <TiltCard
+          className="
+            relative h-full min-h-[260px]
+            p-10 text-left
 
-        <ul className="space-y-4 text-sm text-white/70">
-          <li className="flex gap-3">
-            <span className="text-[#2F8CFF]">•</span>
-            Brands serious about scalable growth
-          </li>
-          <li className="flex gap-3">
-            <span className="text-[#2F8CFF]">•</span>
-            Businesses investing in performance, not experiments
-          </li>
-          <li className="flex gap-3">
-            <span className="text-[#2F8CFF]">•</span>
-            Founders seeking long-term systems
-          </li>
-        </ul>
-      </TiltCard>
-    </Tilt3D>
+            border border-white/10
+            bg-[#0B0D10]
+            rounded-2xl
+
+            transition-all duration-300 ease-out
+            group-hover:border-[#2F8CFF]/50
+            group-hover:shadow-[0_0_45px_rgba(47,140,255,0.22)]
+            active:border-[#2F8CFF]/60
+            active:shadow-[0_0_45px_rgba(47,140,255,0.28)]
+          "
+        >
+          {/* GLOW SWEEP LINE */}
+          <span
+            className="
+              pointer-events-none absolute inset-0
+              rounded-2xl
+              opacity-0 group-hover:opacity-100 group-active:opacity-100
+              transition-opacity duration-300
+            "
+            style={{
+              background:
+                "linear-gradient(120deg, transparent 30%, rgba(47,140,255,0.35), transparent 70%)",
+            }}
+          />
+
+          {/* TITLE */}
+          <h3 className="relative z-10 text-lg font-medium text-white mb-6">
+            Ideal Fit
+          </h3>
+
+          {/* LIST */}
+          <ul className="relative z-10 space-y-4 text-sm text-white/70">
+            <li className="flex gap-3">
+              <span className="text-[#2F8CFF]">•</span>
+              Brands serious about scalable growth
+            </li>
+            <li className="flex gap-3">
+              <span className="text-[#2F8CFF]">•</span>
+              Businesses investing in performance, not experiments
+            </li>
+            <li className="flex gap-3">
+              <span className="text-[#2F8CFF]">•</span>
+              Founders seeking long-term systems
+            </li>
+          </ul>
+        </TiltCard>
+      </Tilt3D>
+    </motion.div>
 
     {/* NOT A FIT */}
-    <Tilt3D>
-      <TiltCard className="p-10 h-full text-left border border-white/5">
-        <h3 className="text-lg font-medium text-white/60 mb-6">
-          Not a Fit
-        </h3>
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, ease: "easeOut", delay: 0.08 }}
+      whileTap={{ scale: 0.98 }}
+      className="group relative h-full"
+    >
+      <Tilt3D>
+        <TiltCard
+          className="
+            relative h-full min-h-[260px]
+            p-10 text-left
 
-        <ul className="space-y-4 text-sm text-white/45">
-          <li className="flex gap-3">
-            <span className="text-white/30">•</span>
-            Low-budget trial marketing
-          </li>
-          <li className="flex gap-3">
-            <span className="text-white/30">•</span>
-            Short-term, non-strategic campaigns
-          </li>
-        </ul>
-      </TiltCard>
-    </Tilt3D>
+            border border-white/10
+            bg-[#0B0D10]
+            rounded-2xl
+
+            transition-all duration-300 ease-out
+            group-hover:border-white/30
+            group-hover:shadow-[0_0_35px_rgba(255,255,255,0.12)]
+            active:border-white/40
+            active:shadow-[0_0_35px_rgba(255,255,255,0.18)]
+          "
+        >
+          {/* GLOW SWEEP LINE (SUBTLE) */}
+          <span
+            className="
+              pointer-events-none absolute inset-0
+              rounded-2xl
+              opacity-0 group-hover:opacity-100 group-active:opacity-100
+              transition-opacity duration-300
+            "
+            style={{
+              background:
+                "linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.18), transparent 70%)",
+            }}
+          />
+
+          {/* TITLE */}
+          <h3 className="relative z-10 text-lg font-medium text-white/60 mb-6">
+            Not a Fit
+          </h3>
+
+          {/* LIST */}
+          <ul className="relative z-10 space-y-4 text-sm text-white/45">
+            <li className="flex gap-3">
+              <span className="text-white/30">•</span>
+              Low-budget trial marketing
+            </li>
+            <li className="flex gap-3">
+              <span className="text-white/30">•</span>
+              Short-term, non-strategic campaigns
+            </li>
+          </ul>
+        </TiltCard>
+      </Tilt3D>
+    </motion.div>
 
   </div>
 </Section>
+
 
       {/* ================= FAQ SECTION ================= */}
 <Section className="border-t border-white/10 py-20 px-6 lg:px-14">

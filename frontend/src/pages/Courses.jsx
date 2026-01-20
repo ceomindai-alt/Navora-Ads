@@ -58,31 +58,75 @@ export default function CoursesPage() {const navigate = useNavigate();
 
       {/* WHY ACADEMY */}
       <Section title="Why Navora Ads Academy">
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-  {[
-    {
-      t: "Practitioner-Led",
-      d: "Courses designed and taught by professionals actively managing real campaigns.",
-    },
-    {
-      t: "System-Focused",
-      d: "Learn how ads, SEO, funnels, automation, and analytics work together.",
-    },
-    {
-      t: "Outcome-Oriented",
-      d: "Built for employability, freelancing, entrepreneurship, and business growth.",
-    },
-  ].map(({ t, d }) => (
-    <Tilt3D key={t}>
-      <TiltCard className="p-8 h-full text-center">
-        <h3 className="text-lg font-medium">{t}</h3>
-        <p className="mt-4 text-white/60 text-sm">{d}</p>
-      </TiltCard>
-    </Tilt3D>
-  ))}
-</div>
+  <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
-      </Section>
+    {[
+      {
+        t: "Practitioner-Led",
+        d: "Courses designed and taught by professionals actively managing real campaigns.",
+      },
+      {
+        t: "System-Focused",
+        d: "Learn how ads, SEO, funnels, automation, and analytics work together.",
+      },
+      {
+        t: "Outcome-Oriented",
+        d: "Built for employability, freelancing, entrepreneurship, and business growth.",
+      },
+    ].map(({ t, d }) => (
+      <Tilt3D key={t}>
+        <TiltCard
+          className="
+            relative
+            p-8 h-full text-center
+            border border-white/15
+            bg-[#0B0D10]
+            rounded-xl
+            overflow-hidden
+          "
+        >
+          {/* BORDER RUN EFFECT */}
+          <span
+            className="pointer-events-none absolute inset-0 rounded-xl"
+            style={{
+              background:
+                "linear-gradient(90deg, transparent 0%, #2F8CFF 50%, transparent 100%)",
+              backgroundSize: "200% 100%",
+              animation: "borderRun 3s linear infinite",
+              mask:
+                "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+              WebkitMask:
+                "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+              maskComposite: "exclude",
+              WebkitMaskComposite: "xor",
+              padding: "1px",
+            }}
+          />
+
+          <h3 className="relative z-10 text-lg font-medium text-white">
+            {t}
+          </h3>
+
+          <p className="relative z-10 mt-4 text-white/60 text-sm">
+            {d}
+          </p>
+        </TiltCard>
+      </Tilt3D>
+    ))}
+
+  </div>
+
+  {/* KEYFRAMES — INCLUDE ONCE PER PAGE */}
+  <style>
+    {`
+      @keyframes borderRun {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 200% 50%; }
+      }
+    `}
+  </style>
+</Section>
+
 
       {/* WHO SHOULD LEARN */}
       <Section title="Who These Courses Are For">

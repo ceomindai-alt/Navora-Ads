@@ -207,13 +207,12 @@ export default function CaseStudiesPage() {
 
 
       {/* PROCESS */}
-      <section className=" py-20 px-6 text-center">
+      <section className="py-20 px-6 text-center">
   <h2 className="reveal-text text-3xl font-semibold mb-12">
     How These Results Are Achieved
   </h2>
 
   <div className="max-w-5xl mx-auto grid md:grid-cols-4 gap-8 text-sm">
-
     {[
       {
         s: "Research",
@@ -232,24 +231,60 @@ export default function CaseStudiesPage() {
         d: "Continuous performance improvement",
       },
     ].map(({ s, d }) => (
-
       <Tilt3D key={s}>
-        <TiltCard className="p-6 h-full text-center">
+        <TiltCard
+          className="
+            relative
+            p-6 h-full text-center
+            border border-white/15
+            bg-[#0B0D10]
+            rounded-xl
+            overflow-hidden
+          "
+        >
+          {/* BORDER RUN EFFECT */}
+          <span
+            className="
+              pointer-events-none
+              absolute inset-0
+              rounded-xl
+            "
+            style={{
+              background:
+                "linear-gradient(90deg, transparent 0%, #2F8CFF 50%, transparent 100%)",
+              backgroundSize: "200% 100%",
+              animation: "borderRun 3s linear infinite",
+              mask:
+                "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+              WebkitMask:
+                "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+              maskComposite: "exclude",
+              WebkitMaskComposite: "xor",
+              padding: "1px",
+            }}
+          />
 
-          <h3 className="text-white text-lg font-medium mb-3">
+          <h3 className="relative z-10 text-white text-lg font-medium mb-3">
             {s}
           </h3>
 
-          <p className="text-white/60">
+          <p className="relative z-10 text-white/60">
             {d}
           </p>
-
         </TiltCard>
       </Tilt3D>
-
     ))}
-
   </div>
+
+  {/* BORDER ANIMATION KEYFRAMES */}
+  <style>
+    {`
+      @keyframes borderRun {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 200% 50%; }
+      }
+    `}
+  </style>
 </section>
 
 
