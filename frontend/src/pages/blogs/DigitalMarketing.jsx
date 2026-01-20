@@ -190,12 +190,12 @@ export default function DigitalMarketing() {
             leads, strong brand visibility, and measurable business growth.
           </p>
 
-          <Link
-            to="/contact"
-            className="inline-block bg-blue-600 hover:bg-blue-500 transition px-10 py-3 rounded-lg font-semibold"
+          <a
+            href="https://wa.me/919952957187"
+            className="shimmer-btn mt-6 inline-flex rounded-full bg-[#2F8CFF] px-10 py-3 text-white font-medium"
           >
             Get Free Digital Marketing Consultation
-          </Link>
+          </a>
 
           <div className="mt-8">
             <Link
