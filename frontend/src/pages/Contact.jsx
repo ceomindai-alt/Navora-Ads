@@ -31,26 +31,7 @@ const handleSubmit = async (e) => {
     return;
   }
 
-   // ✅ WhatsApp (OPEN FIRST – popup-safe)
-    const whatsappNumber = "919876543210";
-    const whatsappMessage = `
-New Website Lead 🚀
 
-Name: ${form.name}
-Email: ${form.email}
-Phone: ${form.number}
-Company: ${form.company || "N/A"}
-Budget: ${form.budget || "Not specified"}
-
-Message:
-${form.message || "No message provided"}
-    `;
-
-    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-      whatsappMessage.trim()
-    )}`;
-
-    window.open(whatsappURL, "_blank");
 
   try {
     // 1️⃣ EmailJS

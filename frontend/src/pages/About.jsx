@@ -23,6 +23,18 @@ export default function AboutPage() {
           name="description"
           content="About Navora Ads, a founder-led digital marketing agency in Chennai building performance-driven growth systems for scalable businesses across India and global markets."
         />
+         <link rel="canonical" href="https://www.navoraads.com/about" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="About Navora Ads | Digital Marketing Agency in Chennai" />
+        <meta
+          property="og:description"
+          content="Founder-led, performance-driven digital marketing agency in Chennai delivering scalable growth systems for modern businesses."
+        />
+        <meta property="og:url" content="https://www.navoraads.com/about" />
+        <meta property="og:site_name" content="Navora Ads" />
+        <meta property="og:image" content="https://www.navoraads.com/og-image.jpg" />
       </Helmet>
 
       {/* ================= HERO ================= */}
