@@ -62,34 +62,105 @@ export default function HealthcareCaseStudy() {
 
       {/* ENTERPRISE EXPOSURE */}
       <Section title="Healthcare & Enterprise Ecosystem Exposure">
-        <p>
-          Alongside direct healthcare clients, our team has executed campaigns,
-          strategy frameworks, and platform-level exposure across healthcare,
-          aesthetic, and enterprise digital ecosystems.
+  {/* INLINE CSS — SELF CONTAINED */}
+  <style>
+    {`
+      @keyframes border-spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .animated-border {
+        animation: border-spin 8s linear infinite;
+      }
+
+      .border-wrapper:hover .animated-border {
+        animation-duration: 3.5s;
+        filter: brightness(1.4);
+      }
+    `}
+  </style>
+
+  <p>
+    Alongside direct healthcare clients, our team has executed campaigns,
+    strategy frameworks, and platform-level exposure across healthcare,
+    aesthetic, and enterprise digital ecosystems.
+  </p>
+
+  <div className="mt-10 grid md:grid-cols-2 gap-6 text-sm">
+
+    {/* CARD 1 */}
+    <div className="border-wrapper relative rounded-2xl p-[3px] overflow-hidden transition-all duration-300">
+      {/* THICK CONTINUOUS ANIMATED BORDER */}
+      <span
+        className="
+          animated-border
+          absolute inset-0
+          bg-[conic-gradient(from_0deg,transparent_20%,rgba(47,140,255,0.9),transparent_80%)]
+        "
+      />
+
+      {/* CARD CONTENT */}
+      <div
+        className="
+          relative rounded-2xl bg-[#0B0D10] p-6
+          border border-white/10
+          transition-all duration-300
+          hover:border-[#2F8CFF]/50
+          hover:shadow-[0_0_45px_rgba(47,140,255,0.35)]
+        "
+      >
+        <h3 className="text-white font-medium mb-2">
+          Healthcare Brands
+        </h3>
+        <p className="text-white/70 leading-relaxed">
+          Allure Skin • Hair • Body Clinic<br />
+          Bloom Aesthetics & Hair Transplant Clinic<br />
+          Dermatology & aesthetic healthcare brands
         </p>
+      </div>
+    </div>
 
-        <div className="mt-10 grid md:grid-cols-2 gap-6 text-sm">
-          <div className="border border-white/10 rounded-xl p-6">
-            <h3 className="text-white font-medium mb-2">Healthcare Brands</h3>
-            <p>
-              Allure Skin • Hair • Body Clinic<br />
-              Bloom Aesthetics & Hair Transplant Clinic<br />
-              Dermatology & aesthetic healthcare brands
-            </p>
-          </div>
+    {/* CARD 2 */}
+    <div className="border-wrapper relative rounded-2xl p-[3px] overflow-hidden transition-all duration-300">
+      {/* THICK CONTINUOUS ANIMATED BORDER */}
+      <span
+        className="
+          animated-border
+          absolute inset-0
+          bg-[conic-gradient(from_0deg,transparent_20%,rgba(47,140,255,0.9),transparent_80%)]
+        "
+      />
 
-          <div className="border border-white/10 rounded-xl p-6">
-            <h3 className="text-white font-medium mb-2">
-              Enterprise & Platform Exposure
-            </h3>
-            <p>
-              Meta & Google healthcare campaigns<br />
-              Analytics, CRM & enquiry systems<br />
-              Enterprise digital compliance alignment
-            </p>
-          </div>
-        </div>
-      </Section>
+      {/* CARD CONTENT */}
+      <div
+        className="
+          relative rounded-2xl bg-[#0B0D10] p-6
+          border border-white/10
+          transition-all duration-300
+          hover:border-[#2F8CFF]/50
+          hover:shadow-[0_0_45px_rgba(47,140,255,0.35)]
+        "
+      >
+        <h3 className="text-white font-medium mb-2">
+          Enterprise & Platform Exposure
+        </h3>
+        <p className="text-white/70 leading-relaxed">
+          Meta & Google healthcare campaigns<br />
+          Analytics, CRM & enquiry systems<br />
+          Enterprise digital compliance alignment
+        </p>
+      </div>
+    </div>
+
+  </div>
+</Section>
+
+
 
       {/* CHALLENGES */}
       <Section title="The Challenges">

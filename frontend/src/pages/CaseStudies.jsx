@@ -308,7 +308,9 @@ export default function CaseStudiesPage() {
           We work with a limited number of brands each quarter to maintain
           execution quality.
         </p>
-        <a href="/contact" className="shimmer-btn inline-block mt-12 rounded-full bg-[#2F8CFF] px-16 py-4 text-sm font-medium">
+        <a href="/contact" 
+              className="shimmer-btn mt-6 inline-flex rounded-full bg-[#2F8CFF] px-10 py-3 text-white font-medium"
+            >
           Book a Strategy Call
         </a>
       </section>

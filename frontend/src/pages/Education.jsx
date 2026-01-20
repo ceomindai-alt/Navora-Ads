@@ -44,31 +44,103 @@ export default function EducationCaseStudy() {
       </Section>
 
       <Section title="Education & Institutional Exposure">
-        <p>
-          Our team has delivered admissions and awareness campaigns across
-          schools, colleges, and education-driven institutions.
+  {/* INLINE CSS — SELF CONTAINED */}
+  <style>
+    {`
+      @keyframes border-spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .animated-border {
+        animation: border-spin 8s linear infinite;
+      }
+
+      .border-wrapper:hover .animated-border {
+        animation-duration: 3.5s;
+        filter: brightness(1.4);
+      }
+    `}
+  </style>
+
+  <p>
+    Our team has delivered admissions and awareness campaigns across
+    schools, colleges, and education-driven institutions.
+  </p>
+
+  <div className="mt-10 grid md:grid-cols-2 gap-6 text-sm">
+
+    {/* CARD 1 */}
+    <div className="border-wrapper relative rounded-2xl p-[3px] overflow-hidden transition-all duration-300">
+      {/* THICK CONTINUOUS ANIMATED BORDER */}
+      <span
+        className="
+          animated-border
+          absolute inset-0
+          bg-[conic-gradient(from_0deg,transparent_20%,rgba(47,140,255,0.9),transparent_80%)]
+        "
+      />
+
+      {/* CARD CONTENT */}
+      <div
+        className="
+          relative rounded-2xl bg-[#0B0D10] p-6
+          border border-white/10
+          transition-all duration-300
+          hover:border-[#2F8CFF]/50
+          hover:shadow-[0_0_45px_rgba(47,140,255,0.35)]
+        "
+      >
+        <h3 className="text-white font-medium mb-2">
+          Education Brands
+        </h3>
+        <p className="text-white/70 leading-relaxed">
+          SRM School<br />
+          Vels Institutions<br />
+          Saveetha Group & academic institutions
         </p>
+      </div>
+    </div>
 
-        <div className="mt-10 grid md:grid-cols-2 gap-6 text-sm">
-          <div className="border border-white/10 rounded-xl p-6">
-            <h3 className="text-white font-medium mb-2">Education Brands</h3>
-            <p>
-              SRM School<br />
-              Vels Institutions<br />
-              Saveetha Group & academic institutions
-            </p>
-          </div>
+    {/* CARD 2 */}
+    <div className="border-wrapper relative rounded-2xl p-[3px] overflow-hidden transition-all duration-300">
+      {/* THICK CONTINUOUS ANIMATED BORDER */}
+      <span
+        className="
+          animated-border
+          absolute inset-0
+          bg-[conic-gradient(from_0deg,transparent_20%,rgba(47,140,255,0.9),transparent_80%)]
+        "
+      />
 
-          <div className="border border-white/10 rounded-xl p-6">
-            <h3 className="text-white font-medium mb-2">Admissions Systems</h3>
-            <p>
-              Seasonal campaign frameworks<br />
-              Parent-intent messaging<br />
-              Enquiry qualification workflows
-            </p>
-          </div>
-        </div>
-      </Section>
+      {/* CARD CONTENT */}
+      <div
+        className="
+          relative rounded-2xl bg-[#0B0D10] p-6
+          border border-white/10
+          transition-all duration-300
+          hover:border-[#2F8CFF]/50
+          hover:shadow-[0_0_45px_rgba(47,140,255,0.35)]
+        "
+      >
+        <h3 className="text-white font-medium mb-2">
+          Admissions Systems
+        </h3>
+        <p className="text-white/70 leading-relaxed">
+          Seasonal campaign frameworks<br />
+          Parent-intent messaging<br />
+          Enquiry qualification workflows
+        </p>
+      </div>
+    </div>
+
+  </div>
+</Section>
+
 
       <Section title="Challenges">
         <ul className="list-disc pl-6 space-y-2">

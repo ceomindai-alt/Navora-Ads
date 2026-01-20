@@ -44,32 +44,104 @@ export default function RealEstateCaseStudy() {
       </Section>
 
       <Section title="Real Estate Brands & Ecosystem Exposure">
-        <p>
-          Alongside direct real estate clients, our team has executed buyer-intent
-          campaigns and funnel systems across residential development and
-          property marketing ecosystems.
+  {/* INLINE CSS — SELF CONTAINED */}
+  <style>
+    {`
+      @keyframes border-spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .animated-border {
+        animation: border-spin 8s linear infinite;
+      }
+
+      .border-wrapper:hover .animated-border {
+        animation-duration: 3.5s;
+        filter: brightness(1.4);
+      }
+    `}
+  </style>
+
+  <p>
+    Alongside direct real estate clients, our team has executed buyer-intent
+    campaigns and funnel systems across residential development and
+    property marketing ecosystems.
+  </p>
+
+  <div className="mt-10 grid md:grid-cols-2 gap-6 text-sm">
+
+    {/* CARD 1 */}
+    <div className="border-wrapper relative rounded-2xl p-[3px] overflow-hidden transition-all duration-300">
+      {/* THICK CONTINUOUS ANIMATED BORDER */}
+      <span
+        className="
+          animated-border
+          absolute inset-0
+          bg-[conic-gradient(from_0deg,transparent_20%,rgba(47,140,255,0.9),transparent_80%)]
+        "
+      />
+
+      {/* CARD CONTENT */}
+      <div
+        className="
+          relative rounded-2xl bg-[#0B0D10] p-6
+          border border-white/10
+          transition-all duration-300
+          hover:border-[#2F8CFF]/50
+          hover:shadow-[0_0_45px_rgba(47,140,255,0.35)]
+        "
+      >
+        <h3 className="text-white font-medium mb-2">
+          Real Estate Brands
+        </h3>
+        <p className="text-white/70 leading-relaxed">
+          Casa Grande<br />
+          Krish Housing<br />
+          Builders & Developers in Chennai
         </p>
+      </div>
+    </div>
 
-        <div className="mt-10 grid md:grid-cols-2 gap-6 text-sm">
-          <div className="border border-white/10 rounded-xl p-6">
-            <h3 className="text-white font-medium mb-2">Real Estate Brands</h3>
-            <p>
-               Casa Grande<br />
-              Krish housing<br />
-              Builders & Developers in Chennai
-            </p>
-          </div>
+    {/* CARD 2 */}
+    <div className="border-wrapper relative rounded-2xl p-[3px] overflow-hidden transition-all duration-300">
+      {/* THICK CONTINUOUS ANIMATED BORDER */}
+      <span
+        className="
+          animated-border
+          absolute inset-0
+          bg-[conic-gradient(from_0deg,transparent_20%,rgba(47,140,255,0.9),transparent_80%)]
+        "
+      />
 
-          <div className="border border-white/10 rounded-xl p-6">
-            <h3 className="text-white font-medium mb-2">Sales & Funnel Systems</h3>
-            <p>
-              Meta & Google buyer-intent campaigns<br />
-              Funnel & CRM alignment<br />
-              Lead qualification frameworks
-            </p>
-          </div>
-        </div>
-      </Section>
+      {/* CARD CONTENT */}
+      <div
+        className="
+          relative rounded-2xl bg-[#0B0D10] p-6
+          border border-white/10
+          transition-all duration-300
+          hover:border-[#2F8CFF]/50
+          hover:shadow-[0_0_45px_rgba(47,140,255,0.35)]
+        "
+      >
+        <h3 className="text-white font-medium mb-2">
+          Sales & Funnel Systems
+        </h3>
+        <p className="text-white/70 leading-relaxed">
+          Meta & Google buyer-intent campaigns<br />
+          Funnel & CRM alignment<br />
+          Lead qualification frameworks
+        </p>
+      </div>
+    </div>
+
+  </div>
+</Section>
+
 
       <Section title="Challenges">
         <ul className="list-disc pl-6 space-y-2">
@@ -129,8 +201,8 @@ function CTA() {
       </p>
       <a
         href="/contact"
-        className="inline-block mt-12 rounded-full bg-[#2F8CFF] px-16 py-4 text-sm font-medium"
-      >
+              className="shimmer-btn mt-6 inline-flex rounded-full bg-[#2F8CFF] px-10 py-3 text-white font-medium"
+            >
         Book a Strategy Call
       </a>
     </section>
