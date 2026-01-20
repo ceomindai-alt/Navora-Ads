@@ -32,6 +32,10 @@ export default function DigitalMarketingAgencyChennai() {
           rel="canonical"
           href="https://navoraads.com/digital-marketing-agency-chennai"
         />
+        <link
+          rel="canonical"
+          href="https://www.navoraads.com/digital-marketing-agency-chennai"
+        />
       </Helmet>
 
       {/* ================= HERO ================= */}

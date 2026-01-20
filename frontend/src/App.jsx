@@ -26,7 +26,14 @@ import Snowfall from "react-snowfall";
 import HighTicketLanding from "./seo/HighTicketLanding";
 import Disclaimer from "./pages/Disclaimer";
 import GlobalH2ScrollReveal from "./components/GlobalH2ScrollReveal";
-
+import Blog from "./pages/Blog";
+import GoogleAdsBlog from "./pages/blogs/GoogleAds";
+import MetaAdsBlog from "./pages/blogs/MetaAds";
+import SEO from "./pages/blogs/SEO";
+import AIMarketing from "./pages/blogs/AIMarketing";
+import WebsiteDev from "./pages/blogs/WebsiteDev";
+import DigitalMarketing from "./pages/blogs/DigitalMarketing";
+import Top20Chennai from "./pages/blogs/Top20Chennai";
 
 function App() {
   return (
@@ -60,6 +67,17 @@ function App() {
         <Route path="/our-process" element={<OurProcess />} />
         <Route path="/insights" element={<Insights />} />
         <Route path="/web" element={<HighTicketLanding />} />
+        <Route path="/blog" element={<Blog />}/>
+        <Route path="/blog/digital-marketing" element={<DigitalMarketing />}/>
+         <Route path="/blog/google-ads" element={<GoogleAdsBlog />} />
+        <Route path="/blog/meta-ads" element={<MetaAdsBlog />} />
+        <Route path="/blog/seo" element={<SEO />} />
+        <Route path="/blog/ai-marketing" element={<AIMarketing />} />
+        <Route
+          path="/blog/website-development"
+          element={<WebsiteDev />}
+        />
+        <Route path="/blog/top-20-digital-marketing-companies-in-chennai" element={<Top20Chennai />}/>
       </Routes>
 
       <Footer />

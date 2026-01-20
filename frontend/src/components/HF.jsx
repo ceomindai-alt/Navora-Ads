@@ -213,6 +213,7 @@ export function Footer() {
               <li><Link to="/about" onClick={scrollTop}>About</Link></li>
               <li><Link to="/careers" onClick={scrollTop}>Careers</Link></li>
               <li><Link to="/contact" onClick={scrollTop}>Contact</Link></li>
+              <li><Link to="/blog" onClick={scrollTop}>Blog</Link></li>
             </ul>
           </div>
 

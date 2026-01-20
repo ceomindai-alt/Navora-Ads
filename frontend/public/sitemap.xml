@@ -32,6 +32,55 @@
     <priority>1.0</priority>
   </url>
 
+  <url>
+    <loc>https://navoraads.com/blog</loc>
+    <priority>1.0</priority>
+  </url>
+
+    <!-- ================= BLOG PAGES ================= -->
+  <url>
+    <loc>https://www.navoraads.com/blog/digital-marketing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.navoraads.com/blog/google-ads</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.navoraads.com/blog/meta-ads</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.navoraads.com/blog/seo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.navoraads.com/blog/ai-marketing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.navoraads.com/blog/website-development</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ✅ NEW BLOG PAGE ADDED -->
+  <url>
+    <loc>https://www.navoraads.com/blog/top-20-digital-marketing-companies-in-chennai</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- SEO Service Pages -->
   <url>
     <loc>https://navoraads.com/digital-marketing-agency-chennai</loc>

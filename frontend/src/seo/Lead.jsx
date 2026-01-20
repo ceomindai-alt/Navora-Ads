@@ -23,6 +23,7 @@ export default function LeadGenerationAgencyChennai() {
           content="Navora Ads is a performance-driven lead generation agency in Chennai helping businesses generate high-quality leads through paid ads, funnels, SEO, and automation systems."
         />
         <link rel="canonical" href="https://navoraads.com/lead-generation-agency-chennai" />
+         <link rel="canonical" href="https://www.navoraads.com/lead-generation-agency-chennai" />
       </Helmet>
 
       {/* ================= HERO ================= */}

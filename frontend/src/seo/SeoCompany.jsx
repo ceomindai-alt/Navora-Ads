@@ -24,6 +24,10 @@ export default function SEOCompanyChennai() {
           rel="canonical"
           href="https://navoraads.com/seo-company-chennai"
         />
+        <link
+          rel="canonical"
+          href="https://www.navoraads.com/seo-company-chennai"
+        />
       </Helmet>
 
       {/* HERO */}
