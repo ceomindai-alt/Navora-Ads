@@ -57,7 +57,7 @@ export function Header() {
   return (
     <header
       dir="ltr"
-      className="fixed top-0 left-0 w-full z-50 bg-[#0B0D10]/85 backdrop-blur border-b border-white/10"
+      className="fixed top-0 left-0 w-full z-50 bg-black border-b border-white/10"
     >
       <div className="w-full max-w-none px-4 md:px-6 lg:px-14 py-4 flex items-center justify-between">
 
@@ -183,7 +183,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-[#0B0D10] text-white/60 border-t border-white/10">
+    <footer className="bg-black text-white/60 border-t border-white/10">
 
       {/* MAIN FOOTER CONTENT */}
       <div className="w-full max-w-none px-4 md:px-6 lg:px-14 py-20">
