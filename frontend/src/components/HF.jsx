@@ -55,24 +55,33 @@ export function Header() {
   }, [open]);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-[#0B0D10]/85 backdrop-blur border-b border-white/10">
+    <header
+      dir="ltr"
+      className="fixed top-0 left-0 w-full z-50 bg-[#0B0D10]/85 backdrop-blur border-b border-white/10"
+    >
       <div className="w-full max-w-none px-4 md:px-6 lg:px-14 py-4 flex items-center justify-between">
 
         {/* ================= BRAND ================= */}
         <NavLink
           to="/"
           onClick={scrollToTop}
-          className="group flex items-center gap-2 overflow-hidden"
+          className="group flex items-center gap-2 overflow-hidden flex-shrink-0"
         >
-          <video
-            src={logo}
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="h-12 w-auto"
-          />
-          <span className="navora-brand text-2xl text-white font-semibold tracking-wide">
+          {/* LOGO WRAPPER — WIDTH LOCKED */}
+          <div className="w-12 h-12 flex items-center justify-center flex-shrink-0">
+            <video
+              src={logo}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              className="h-12 w-12 object-contain"
+            />
+          </div>
+
+          {/* BRAND TEXT — WIDTH STABLE */}
+          <span className="navora-brand text-2xl text-white font-semibold tracking-wide whitespace-nowrap">
             Navora <span className="text-[#2F8CFF]">Ads</span>
           </span>
         </NavLink>
@@ -104,14 +113,14 @@ export function Header() {
         {/* ================= CTA ================= */}
         <a
           href="https://wa.me/919952957187"
-          className="shimmer-btn hidden md:inline-flex rounded-full bg-[#2F8CFF] px-6 py-2 text-sm font-medium text-white"
+          className="shimmer-btn hidden md:inline-flex rounded-full bg-[#2F8CFF] px-6 py-2 text-sm font-medium text-white flex-shrink-0"
         >
           Book a Strategy Call
         </a>
 
         {/* ================= MOBILE MENU BUTTON ================= */}
         <button
-          className="md:hidden text-white text-2xl leading-none transition-transform duration-200"
+          className="md:hidden text-white text-2xl leading-none transition-transform duration-200 flex-shrink-0"
           onClick={() => setOpen((prev) => !prev)}
           aria-label={open ? "Close menu" : "Open menu"}
         >
