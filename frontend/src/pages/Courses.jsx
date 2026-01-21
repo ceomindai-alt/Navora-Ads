@@ -2,6 +2,7 @@
 // Enterprise-grade education & authority positioning
 // React 19 + Tailwind CSS + Framer Motion
 import Tilt3D from "../components/Tilt3D";
+import { NavLink } from "react-router-dom";
 import { TiltCard } from "../components/TiltCard";
 import { useNavigate } from "react-router-dom";
 import React from "react";
@@ -12,7 +13,16 @@ const fadeUp = {
   visible: { opacity: 1, y: 0 },
 };
 
+export function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+}
+
 export default function CoursesPage() {const navigate = useNavigate();
+  
 
   return (
     <main className="bg-[#0B0D10] text-[#F5F7FA] overflow-hidden">
@@ -148,50 +158,77 @@ export default function CoursesPage() {const navigate = useNavigate();
 
       {/* COURSES OFFERED */}
       <Section title="Courses Offered">
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-  {[
-    {
-      title: "Digital Marketing Mastery Program",
-      desc: "A complete end-to-end program covering paid ads, SEO, funnels, automation, analytics, and growth strategy.",
-      points: ["Meta Ads & Google Ads","SEO & Local SEO","Funnels & CRO","Automation & CRM","Analytics & tracking"],
-    },
-    {
-      title: "Meta Ads & Google Ads Performance Program",
-      desc: "Deep-dive training focused on building and scaling high-performing paid advertising systems.",
-      points: ["Campaign architecture","Creative testing","Audience research","Scaling & optimisation"],
-    },
-    {
-      title: "SEO & Local SEO Systems",
-      desc: "Learn how to build long-term organic growth through technical SEO, content, and local dominance.",
-      points: ["Keyword research","On-page & off-page SEO","GBP optimisation","SEO content strategy"],
-    },
-    {
-      title: "Funnels, Automation & Lead Systems",
-      desc: "Design conversion systems that turn traffic into qualified leads and customers.",
-      points: ["Landing pages","WhatsApp & email automation","CRM pipelines","Lead scoring"],
-    },
-  ].map(({ title, desc, points }) => (
-    <Tilt3D key={title}>
-      <TiltCard className="p-8 h-full">
-        <h3 className="text-xl font-medium">{title}</h3>
-        <p className="mt-4 text-white/60 text-sm">{desc}</p>
-        <ul className="mt-6 space-y-2 text-sm text-white/50">
-          {points.map((p) => (
-            <li key={p}>• {p}</li>
-          ))}
-        </ul>
-      </TiltCard>
-    </Tilt3D>
-  ))}
-</div>
+  <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+    {[
+      {
+        title: "Digital Marketing Mastery Program",
+        desc: "A complete end-to-end program covering paid ads, SEO, funnels, automation, analytics, and growth strategy.",
+        points: [
+          "Meta Ads & Google Ads",
+          "SEO & Local SEO",
+          "Funnels & CRO",
+          "Automation & CRM",
+          "Analytics & tracking",
+        ],
+      },
+      {
+        title: "Meta Ads & Google Ads Performance Program",
+        desc: "Deep-dive training focused on building and scaling high-performing paid advertising systems.",
+        points: [
+          "Campaign architecture",
+          "Creative testing",
+          "Audience research",
+          "Scaling & optimisation",
+        ],
+      },
+      {
+        title: "SEO & Local SEO Systems",
+        desc: "Learn how to build long-term organic growth through technical SEO, content, and local dominance.",
+        points: [
+          "Keyword research",
+          "On-page & off-page SEO",
+          "GBP optimisation",
+          "SEO content strategy",
+        ],
+      },
+      {
+        title: "Funnels, Automation & Lead Systems",
+        desc: "Design conversion systems that turn traffic into qualified leads and customers.",
+        points: [
+          "Landing pages",
+          "WhatsApp & email automation",
+          "CRM pipelines",
+          "Lead scoring",
+        ],
+      },
+    ].map(({ title, desc, points }) => (
+      <NavLink
+        key={title}
+        to="/contact"
+        onClick={scrollToTop}
+        className="block focus:outline-none"
+      >
+        <Tilt3D>
+          <TiltCard className="p-8 h-full cursor-pointer transition-transform duration-200 hover:scale-[1.01]">
+            <h3 className="text-xl font-medium">{title}</h3>
+            <p className="mt-4 text-white/60 text-sm">{desc}</p>
+            <ul className="mt-6 space-y-2 text-sm text-white/50">
+              {points.map((p) => (
+                <li key={p}>• {p}</li>
+              ))}
+            </ul>
+          </TiltCard>
+        </Tilt3D>
+      </NavLink>
+    ))}
+  </div>
+</Section>
 
-      </Section>
 
       {/* DELIVERY MODE */}
       {/* DELIVERY MODE */}
 <Section title="Learning Format">
   <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-
     {[
       {
         t: "Online Training",
@@ -206,67 +243,72 @@ export default function CoursesPage() {const navigate = useNavigate();
         d: "Custom programs for business teams and organisations.",
       },
     ].map(({ t, d }) => (
-      <motion.div
+      <NavLink
         key={t}
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        whileTap={{ scale: 0.98 }}
-        className="group relative h-full cursor-pointer"
-        onClick={() => navigate("/contact")}
+        to="/contact"
+        onClick={scrollToTop}
+        className="block focus:outline-none"
       >
-        <Tilt3D>
-          <TiltCard
-            className="
-              relative h-full min-h-[220px]
-              flex flex-col justify-center text-center
-              p-8
-
-              border border-white/10
-              bg-[#0B0D10]
-              rounded-2xl
-
-              transition-all duration-300 ease-out
-              group-hover:border-[#2F8CFF]/50
-              group-hover:shadow-[0_0_45px_rgba(47,140,255,0.22)]
-              active:border-[#2F8CFF]/60
-              active:shadow-[0_0_45px_rgba(47,140,255,0.28)]
-            "
-          >
-            {/* FULL CARD GLOW LINE */}
-            <span
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          whileTap={{ scale: 0.98 }}
+          className="group relative h-full cursor-pointer"
+        >
+          <Tilt3D>
+            <TiltCard
               className="
-                pointer-events-none absolute inset-0
+                relative h-full min-h-[220px]
+                flex flex-col justify-center text-center
+                p-8
+
+                border border-white/10
+                bg-[#0B0D10]
                 rounded-2xl
-                opacity-0 group-hover:opacity-100 group-active:opacity-100
-                transition-opacity duration-300
+
+                transition-all duration-300 ease-out
+                group-hover:border-[#2F8CFF]/50
+                group-hover:shadow-[0_0_45px_rgba(47,140,255,0.22)]
+                active:border-[#2F8CFF]/60
+                active:shadow-[0_0_45px_rgba(47,140,255,0.28)]
               "
-              style={{
-                background:
-                  "linear-gradient(120deg, transparent 30%, rgba(47,140,255,0.35), transparent 70%)",
-              }}
-            />
+            >
+              {/* FULL CARD GLOW LINE */}
+              <span
+                className="
+                  pointer-events-none absolute inset-0
+                  rounded-2xl
+                  opacity-0 group-hover:opacity-100 group-active:opacity-100
+                  transition-opacity duration-300
+                "
+                style={{
+                  background:
+                    "linear-gradient(120deg, transparent 30%, rgba(47,140,255,0.35), transparent 70%)",
+                }}
+              />
 
-            {/* TITLE */}
-            <h3 className="relative z-10 text-lg font-medium transition-colors duration-300 group-hover:text-white">
-              {t}
-            </h3>
+              {/* TITLE */}
+              <h3 className="relative z-10 text-lg font-medium transition-colors duration-300 group-hover:text-white">
+                {t}
+              </h3>
 
-            {/* SEPARATOR */}
-            <div className="relative z-10 mx-auto my-4 h-[1px] w-12 bg-white/20 transition-all duration-300 group-hover:w-20 group-hover:bg-[#2F8CFF]/70" />
+              {/* SEPARATOR */}
+              <div className="relative z-10 mx-auto my-4 h-[1px] w-12 bg-white/20 transition-all duration-300 group-hover:w-20 group-hover:bg-[#2F8CFF]/70" />
 
-            {/* DESCRIPTION */}
-            <p className="relative z-10 text-sm text-white/60 leading-relaxed transition-colors duration-300 group-hover:text-white/85">
-              {d}
-            </p>
-          </TiltCard>
-        </Tilt3D>
-      </motion.div>
+              {/* DESCRIPTION */}
+              <p className="relative z-10 text-sm text-white/60 leading-relaxed transition-colors duration-300 group-hover:text-white/85">
+                {d}
+              </p>
+            </TiltCard>
+          </Tilt3D>
+        </motion.div>
+      </NavLink>
     ))}
-
   </div>
 </Section>
+
 
 
       {/* CERTIFICATION */}
