@@ -61,7 +61,6 @@ function App() {
         <Route path="/case-studies/real-estate-lead-generation" element={<RealEstate />} />
         <Route path="/case-studies/education-admissions-marketing" element={<Education />} />
         <Route path="/contact" element={<Contact /> }/>
-        <Route path="/whatsappcta" element={<WhatsAppCTA />} />
         <Route path="/thank-you" element={<ThankYou />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/our-process" element={<OurProcess />} />
@@ -79,6 +78,7 @@ function App() {
         />
         <Route path="/blog/top-20-digital-marketing-companies-in-chennai" element={<Top20Chennai />}/>
       </Routes>
+        <WhatsAppCTA />
 
       <Footer />
     </>
