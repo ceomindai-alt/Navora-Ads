@@ -1,9 +1,5 @@
 {
-  "routes": [
-    { "src": "/favicon.ico", "dest": "/favicon.ico" },
-    { "src": "/favicon-96x96.png", "dest": "/favicon-96x96.png" },
-    { "src": "/favicon-192x192.png", "dest": "/favicon-192x192.png" },
-    { "src": "/apple-touch-icon.png", "dest": "/apple-touch-icon.png" },
-    { "src": "/(.*)", "dest": "/index.html" }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
