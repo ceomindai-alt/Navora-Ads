@@ -106,10 +106,10 @@ export default function HomeBgCanvas() {
       // 🔥 FINAL CENTER FIX
       const centerY =
         device === "touch"
-          ? canvas.height * 0.55     // mobile + desktop-view mobile
+          ? canvas.height * 0.42     // mobile + desktop-view mobile
           : device === "tablet"
-          ? canvas.height * 0.52
-          : canvas.height / 2;
+          ? canvas.height * 0.45
+          : canvas.height * 0.48;
 
       for (let y = 0; y < offCanvas.height; y += step) {
         for (let x = 0; x < offCanvas.width; x += step) {
